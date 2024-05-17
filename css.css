@@ -4,8 +4,6 @@
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --color-h1: #333;
     --color-p: #666;
-    --color-link: #007bff;
-    --color-link-hover: #0056b3;
     --color-square: #007bff;
     --color-square-hover: #0056b3;
     --color-square-text: white;
@@ -18,7 +16,7 @@ body {
     background-color: var(--background-color-body);
 }
 
-.container {
+main {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -38,14 +36,13 @@ p {
 }
 
 a {
-    color: var(--color-link);
+    color: var(--color-square);
+}
+/*
+a:hover {
     text-decoration: none;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
+*/
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -68,4 +65,49 @@ a:hover {
 
 .square:hover {
     background-color: var(--color-square-hover);
+}
+
+.titleBar {
+    background-color: var(--color-square);
+    color: var(--color-square-text);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer div {
+	float: right;
+	text-align: right;
+	width: 100%;
+}
+
+footer div:nth-child(2) {
+	margin-bottom: 50px;	
+}
+
+footer img {
+    width: 225px;
+	height: auto;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 290px) { /* En pantalles menors de 290px */
+    footer img {
+        width: 100%;
+    }
+	main {
+		padding: 5px;
+	}
+	h1 {
+		font-size: 25px;
+	}
 }
