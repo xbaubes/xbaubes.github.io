@@ -1,4 +1,3 @@
-/*
 document.getElementsByTagName("footer")[0].innerHTML = `
 <div>
 <img src="https://raw.githubusercontent.com/xbaubes/xbaubes/main/CC.png" alt="CC(BY)">
@@ -23,4 +22,3 @@ if (navIcons2 !== undefined) {
     <a href="templateModule.html"><img src="assets/icons/arrow-left.svg" alt="Module"></a>
     `;
 }
-*/
