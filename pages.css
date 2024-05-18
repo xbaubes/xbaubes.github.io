@@ -1,14 +1,74 @@
-nav {
-    text-align: left;
-    margin-bottom: 20px;
+:root {
+	--color-title: darkorange;
+    --color-title-darker: orangered;
+    --color-arrowup-hover: orange;
+    --menu-section: #f0f0f0;
+    --darkest: black;
+    --middle-dark: grey;
 }
 
-nav a.home-link {
-    color: #0066cc;
+.titleBar {
+    background-color: var(--color-title);
+    color: var(--color-square-text);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu {
+    background-color: var(--menu-section);
+    padding: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
     text-decoration: none;
-    font-size: 1.2em;
+    color: var(--darkest);
 }
 
-nav a.home-link:hover {
-    text-decoration: underline;
+.menu ul li a:hover {
+    color: var(--color-title-darker);
+}
+
+article section.content {
+    text-align: left;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.scroll-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-title);
+    border-radius: 50%;
+    border: 1px var(--middle-dark) solid;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.scroll-link:hover {
+    background-color: var(--color-arrowup-hover);
+}
+
+.scroll-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
 }
