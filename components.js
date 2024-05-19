@@ -18,14 +18,6 @@ document.getElementsByTagName("footer")[0].innerHTML = `
 </div>
 `;
 
-let navIconsIndex = document.getElementsByClassName("icon-container icon-container-main")[0];
-if (navIconsIndex !== undefined) {
-    navIconsIndex.innerHTML = `
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://xbaubes.github.io" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-    <a href="https://twitter.com/intent/tweet?url=https://xbaubes.github.io&text=Si t'interessa la informàtica, fes-li un cop d'ull" target="_blank"><img src="assets/icons/x.svg" alt="X"></a>
-    `;
-}
-
 let navIcons1 = document.getElementsByClassName("icon-container icon-container-modules")[0];
 if (navIcons1 !== undefined) {
     navIcons1.innerHTML = `
