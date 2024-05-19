@@ -2,13 +2,3 @@
     --color-square: #d9534f;
     --color-square-hover: #962222;
 }
-
-nav.icon-container {
-    margin-bottom: 10px;
-}
-
-nav.icon-container img {
-    width: 20px;
-    height: auto;
-    margin-right: 10px;
-}

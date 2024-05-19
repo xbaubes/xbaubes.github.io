@@ -77,6 +77,17 @@ article .grid .square:hover {
     background-color: var(--color-square-hover);
 }
 
+
+nav.icon-container {
+    margin-bottom: 10px;
+}
+
+nav.icon-container img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
 footer {
     margin-top: 50px;
 }
