@@ -3,7 +3,7 @@
     --background-color-container: #fff;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --color-h1: #333;
-    --color-p: #666;
+    --color-p: #555;
     --color-square: #007bff;
     --color-square-hover: #0056b3;
     --color-square-text: white;
@@ -40,7 +40,7 @@ article h1 {
     color: var(--color-h1);
 }
 
-article p {
+article {
     color: var(--color-p);
 }
 
