@@ -44,6 +44,12 @@ article section.content {
     text-align: left;
 }
 
+article section.content img {
+    width: calc(100% - (150 * (100vw - 1000px) / 500));
+    max-width: 100%;
+    height: auto;
+}
+
 .scroll-to-top {
     position: fixed;
 	display: none;
