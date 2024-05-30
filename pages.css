@@ -5,6 +5,7 @@
     --menu-section: #f0f0f0;
     --darkest: black;
     --middle-dark: grey;
+    --image-padding: #fff3e0;
 }
 
 .titleBar {
@@ -44,7 +45,13 @@ article section.content {
     text-align: left;
 }
 
-article section.content img {
+article section.content .big-image-container {
+    text-align: center;
+    background-color: var(--image-padding);
+}
+
+article section.content .big-image-container img {
+    vertical-align: bottom;
     width: calc(100% - (150 * (100vw - 1000px) / 500));
     max-width: 100%;
     height: auto;
