@@ -46,6 +46,7 @@ article section.content {
 
 .scroll-to-top {
     position: fixed;
+	display: none;
     bottom: 15px;
     right: 10px;
     z-index: 1000;
