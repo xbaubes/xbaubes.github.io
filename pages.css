@@ -52,7 +52,7 @@ article section.content .big-image-container {
 
 article section.content .big-image-container img {
     vertical-align: bottom;
-    width: calc(100% - (150 * (100vw - 1000px) / 500));
+    width: calc(100% - (220 * (100vw - 1000px) / 500));
     max-width: 100%;
     height: auto;
 }
