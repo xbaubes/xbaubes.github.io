@@ -97,13 +97,13 @@ footer p {
 }
 
 footer div {
-	float: right;
+	/*float: right;*/
 	text-align: right;
 	width: 100%;
 }
 
 footer div:nth-child(2) {
-	margin-bottom: 50px;	
+	margin-bottom: 20px;
 }
 
 footer img {
