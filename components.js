@@ -1,10 +1,10 @@
 let modules = [
-    ["aplicacions","https://github.com/xbaubes/AplicacionsInformatiques","../../aplicacions/aplicacions.html"],
-    ["bdd","https://github.com/xbaubes/BasesDeDades","../../bdd/bdd.html"],
-    ["web","https://github.com/xbaubes/DesenvolupamentWeb","../../web/web.html"],
-    ["programacio","https://github.com/xbaubes/Programacio","../../programacio/programacio.html"],
-    ["so","https://github.com/xbaubes/SistemesOperatius","../../so/so.html"],
-    ["xarxes","https://github.com/xbaubes/XarxesISeguretat","../../xarxes/xarxes.html"]
+    ["aplicainfo","https://github.com/xbaubes/AplicacionsInformatiques","../../aplicainfo/aplicacions.html"],
+    ["basesdedades","https://github.com/xbaubes/BasesDeDades","../../basesdedades/bdd.html"],
+    ["desenvolupaweb","https://github.com/xbaubes/DesenvolupamentWeb","../../desenvolupaweb/web.html"],
+    ["programainfo","https://github.com/xbaubes/Programacio","../../programainfo/programacio.html"],
+    ["sistemopera","https://github.com/xbaubes/SistemesOperatius","../../sistemopera/so.html"],
+    ["xarxesinfo","https://github.com/xbaubes/XarxesISeguretat","../../xarxesinfo/xarxes.html"]
 ];
 
 document.getElementsByTagName("footer")[0].innerHTML = `
