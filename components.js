@@ -1,5 +1,5 @@
 let modules = [
-    ["aplicainfo","https://github.com/xbaubes/AplicacionsInformatiques","../../aplicainfo/aplicacions.html"],
+    ["aplicainfo","https://github.com/xbaubes/AplicacionsInformatiques","../../aplicainfo/apps.html"],
     ["basesddades","https://github.com/xbaubes/BasesDeDades","../../basesdedades/bdd.html"],
     ["desenvolupaweb","https://github.com/xbaubes/DesenvolupamentWeb","../../desenvolupaweb/web.html"],
     ["programainfo","https://github.com/xbaubes/Programacio","../../programainfo/programacio.html"],
