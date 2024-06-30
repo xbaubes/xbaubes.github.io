@@ -41,22 +41,6 @@
     color: var(--color-title-darker);
 }
 
-article section.content {
-    text-align: left;
-}
-
-article section.content .big-image-container {
-    text-align: center;
-    background-color: var(--image-padding);
-}
-
-article section.content .big-image-container img {
-    vertical-align: bottom;
-    width: calc(100% - (220 * (100vw - 1000px) / 500));
-    max-width: 100%;
-    height: auto;
-}
-
 .scroll-to-top {
     position: fixed;
 	display: none;
@@ -85,4 +69,128 @@ article section.content .big-image-container img {
     width: 20px;
     height: 20px;
     margin-top: 4px;
+}
+
+article section.content {
+    text-align: left;
+}
+
+/*** big-image-container ***/
+
+article section.content .big-image-container {
+    text-align: center;
+    background-color: var(--image-padding);
+}
+article section.content .big-image-container img {
+    vertical-align: bottom;
+    width: calc(100% - (220 * (100vw - 1000px) / 500));
+    max-width: 100%;
+    height: auto;
+}
+
+/*** triple-image-container ***/
+
+article section.content .triple-image-container {
+    text-align: center;
+    background-color: var(--image-padding);
+}
+article section.content .triple-image-container img {
+    vertical-align: bottom;
+    display: inline-block;
+    margin: 0;
+    height: auto;
+}
+@media (min-width: 900px) { /* En pantalles iguals o majors de 900px */
+    article section.content .triple-image-container img {
+        width: 31%;
+    }
+    article section.content .triple-image-container img + img {
+        margin-left: 2%;
+    }
+}
+@media (min-width: 700px) and (max-width: 899px) { /* En pantalles entre 700px i 899px */
+    article section.content .triple-image-container img {
+        width: 60%;
+    }
+    article section.content .triple-image-container img + img {
+        margin-top: 10px;
+    }
+}
+@media (min-width: 500px) and (max-width: 699px) { /* En pantalles entre 500px i 699px */
+    article section.content .triple-image-container img {
+        width: 80%;
+    }
+    article section.content .triple-image-container img + img {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 499px) { /* En pantalles menors de 500px */
+    article section.content .triple-image-container img {
+        width: 100%;
+    }
+    article section.content .triple-image-container img + img {
+        margin-top: 5px;
+    }
+}
+
+/*** small-float-image-container ***/
+
+article section.content .small-float-image-container {
+    float: right;
+
+}
+article section.content .small-float-image-container img {
+    margin-left: 20px;
+    margin-top: 5px;
+    max-width: 200px;
+    height: auto;
+}
+@media (max-width: 599px) {
+    article section.content .small-float-image-container {
+        float: none;
+        text-align: center;
+        background-color: var(--image-padding);
+    }
+    article section.content .small-float-image-container img {
+        margin: 0;
+        max-width: 100%;
+        display: inline-block;
+    }
+}
+
+/*** small-image-container ***/
+
+article section.content .small-image-container , article section.content .small-image-container-text {
+    display: inline-block; /* Alinea divs horitzontalment */
+    vertical-align: top; /* Alinea divs per la part superior */
+    box-sizing: border-box; /* Padding i border al width del div */
+}
+article section.content .small-image-container {
+    width: 31%;
+    margin-left: 3%;
+}
+article section.content .small-image-container img {
+    width: 100%;
+}
+article section.content .small-image-container-text {
+    width: 65%;
+}
+@media (min-width: 700px) and (max-width: 899px) {
+    article section.content .small-image-container {
+        width: 36%;
+    }
+    article section.content .small-image-container-text {
+        width: 60%;
+    }
+}
+@media (max-width: 699px) {
+    article section.content .small-image-container , article section.content .small-image-container-text{
+        width: 100%;
+        display: inline;
+        margin-left: 0;
+    }
+    article section.content .small-image-container img {
+        vertical-align: bottom;
+        background-color: var(--image-padding);
+    }
 }
