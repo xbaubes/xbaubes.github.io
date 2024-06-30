@@ -177,10 +177,10 @@ article section.content .small-image-container-text {
 }
 @media (min-width: 700px) and (max-width: 899px) {
     article section.content .small-image-container {
-        width: 36%;
+        width: 41%;
     }
     article section.content .small-image-container-text {
-        width: 60%;
+        width: 55%;
     }
 }
 @media (max-width: 699px) {
