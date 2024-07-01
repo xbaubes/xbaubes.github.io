@@ -88,6 +88,15 @@ nav.icon-container img {
     margin-right: 10px;
 }
 
+nav.icon-container #testing {
+    float: right;
+    text-decoration: none;
+    margin-top: 10px;
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+}
+
 footer {
     margin-top: 50px;
 }
