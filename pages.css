@@ -22,8 +22,9 @@ nav .icon-container-div {
 }
 
 .titleBar {
-    background-color: var(--color-title);
-    color: var(--color-square-text);
+    background-color: var(--color-nav);
+    border: solid 2px var(--color-title);
+    color: var(--color-title);
     padding: 10px;
     border-radius: 8px;
     text-align: center;
