@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
 		image.style.display = 'none';
 		nav.style.margin = '0 auto';
 		nav.style.width = '80%';
-		nav.style.backgroundColor = 'var(--background-color-body)';
+		nav.style.backgroundColor = '';
 		nav.style.padding = '20px';
 		if (navDiv !== undefined) navDiv.style.width = '100%';
 	}

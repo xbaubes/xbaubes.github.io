@@ -14,7 +14,7 @@ nav {
     position: -webkit-sticky; /* Per a compatibilitat amb Safari */
     position: sticky;
     top: 0;
-    background-color: var(--background-color-body);
+    /*background-color: var(--background-color-body);*/
     z-index: 1000;
 }
 nav .icon-container-div {
