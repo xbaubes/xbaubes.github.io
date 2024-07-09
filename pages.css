@@ -1,5 +1,6 @@
 :root {
 	--color-title: darkorange;
+    --color-nav: peachpuff;
     --color-title-darker: orangered;
     --color-arrowup-hover: orange;
     --menu-section: #f0f0f0;
@@ -7,6 +8,17 @@
     --middle-dark: grey;
     --image-padding: #fff3e0;
     --margin-image: 16px 0;
+}
+
+nav {
+    position: -webkit-sticky; /* Per a compatibilitat amb Safari */
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color-body);
+    z-index: 1000;
+}
+nav .icon-container-div {
+    margin: 0 auto;
 }
 
 .titleBar {
@@ -54,7 +66,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background-color: var(--color-title);
+    background-color: var(--color-nav);
     border-radius: 50%;
     border: 1px var(--middle-dark) solid;
     text-align: center;

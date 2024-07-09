@@ -16,9 +16,15 @@ body {
     background-color: var(--background-color-body);
 }
 
-main {
+main , nav {
     width: 80%;
     margin: 0 auto;
+    /*box-sizing: content-box;*/
+}
+main {
+    padding: 0px 20px 20px 20px;
+}
+nav {
     padding: 20px;
 }
 
@@ -26,7 +32,7 @@ article {
     padding: 20px;
     background-color: var(--background-color-container);
     border-radius: 8px;
-    box-shadow: 0 0 10px var(--box-shadow-color);
+    box-shadow: 0 5px 10px var(--box-shadow-color);
     text-align: center;
 }
 
@@ -77,11 +83,11 @@ article .grid .square:hover {
     background-color: var(--color-square-hover);
 }
 
-
+/*
 nav.icon-container {
     margin-bottom: 10px;
 }
-
+*/
 nav.icon-container img {
     width: 20px;
     height: auto;
