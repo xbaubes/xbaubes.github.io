@@ -52,6 +52,7 @@ if (navIcons2 !== undefined) {
             `;
         }
     }
+    newDiv.innerHTML += `<div id="titlePageDiv"></div>`;
     navIcons2.appendChild(newDiv);
 }
 

@@ -22,6 +22,11 @@ nav .icon-container-div {
     margin: 0 auto;
 }
 
+nav #titlePageDiv {
+    float: right;
+    white-space: nowrap;
+}
+
 .titleBar {
     background-color: var(--color-nav);
     border: solid 2px var(--color-title);

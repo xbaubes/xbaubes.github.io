@@ -1,7 +1,10 @@
+let showTitlePageDiv = false;
+
 window.addEventListener('scroll', function() {
 	var image = document.getElementsByClassName('scroll-to-top')[0];
 	var nav = document.getElementsByTagName('nav')[0];
 	var navDiv = document.getElementsByClassName('icon-container-div')[0];
+	var titlePageDiv = document.getElementById('titlePageDiv');
 	if (window.scrollY > 0) {
 		image.style.display = 'block';
 		nav.style.margin = '0px';
@@ -16,5 +19,20 @@ window.addEventListener('scroll', function() {
 		nav.style.backgroundColor = '';
 		nav.style.padding = '20px';
 		if (navDiv !== undefined) navDiv.style.width = '100%';
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = "";
+			showTitlePageDiv = false;
+		}
+	}
+	if (window.scrollY >= 100 && !showTitlePageDiv) {
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = "Instal·lació d'una Canaleta";
+			showTitlePageDiv = true;
+		}
+	} else if (window.scrollY < 100) {
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = "";
+			showTitlePageDiv = false;
+		}
 	}
 });
