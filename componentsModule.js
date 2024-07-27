@@ -1,4 +1,4 @@
-function buttonsTitles(param) /* TO DO : en lloc de seleccionar els square, generar los. Esborrar l html fixat i crear array amb direccio de pagines de cada materia (a strings.js / let dades) */
+function buttonsTitles(param) /* TO DO : en lloc de seleccionar els square, generar los. Esborrar l html fixat i crear array amb direccio de pagines de cada materia (a strings.js / let dades). afegir menu desplegable a pagines per seleccionar altres activitats del mateix modul */
 {
     let it = 0;
     let squares = document.getElementsByClassName("square");
