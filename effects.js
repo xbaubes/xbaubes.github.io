@@ -1,5 +1,11 @@
-let showTitlePageDiv = false;
+//obtenim el valor del parametre page de la URL
+const params = new URLSearchParams(window.location.search);
+const indexTxt = decodeURIComponent(params.get("page"));
 
+//l usem com a titol de la pagina
+document.getElementsByClassName("titleBar")[0].textContent = indexTxt;
+
+let showTitlePageDiv = false;
 window.addEventListener('scroll', function() {
 	var image = document.getElementsByClassName('scroll-to-top')[0];
 	var nav = document.getElementsByTagName('nav')[0];
@@ -26,7 +32,7 @@ window.addEventListener('scroll', function() {
 	}
 	if (window.scrollY >= 100 && !showTitlePageDiv) {
 		if (titlePageDiv !== undefined) {
-			titlePageDiv.innerText = "Instal·lació d'una Canaleta";
+			titlePageDiv.innerText = indexTxt;
 			showTitlePageDiv = true;
 		}
 	} else if (window.scrollY < 100) {
