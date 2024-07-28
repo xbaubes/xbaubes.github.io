@@ -42,3 +42,29 @@ window.addEventListener('scroll', function() {
 		}
 	}
 });
+
+/* TO DO : nav with other activities of module */
+
+function navModule(param)
+{
+    let dadesFromTxt = param;
+    for (const clau in dadesFromTxt) {
+        if (dadesFromTxt.hasOwnProperty(clau)) {
+            const valor = dadesFromTxt[clau];
+			if(indexTxt != valor[0])
+			{
+				//only show results on console (TO DO)
+				console.log(valor[0]);
+				console.log(valor[1]);
+			}
+        }
+    }
+}
+
+let url = window.location.href;
+for(let ele of modules)
+{
+    if (url.includes(ele[0])) {
+        navModule(dades[ele[0]]);
+    }
+}

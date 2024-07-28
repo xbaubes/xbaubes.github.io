@@ -1,29 +1,10 @@
-const dades =
-{
+const dades = {
     "xarxesinfo": {
-        "canaleta": "Instal·lació d'una Canaleta",
-        "id": "text\n"
+        "canaleta": ["Instal·lació d'una Canaleta","canaleta/canaleta.html"]
     },
     "templates": {
-        "t1": "Template",
-        "t2": "Testing 1",
-        "t3": "Testing 2"
+        "t1": ["Template","content/templateModuleContent.html"],
+        "t2": ["Testing 1","content/templateModuleContentTesting.html"],
+        "t3": ["Testing 2","content/templateModuleContentTesting.html"]
     }
 };
-
-/* example!!! afegir a dades un array com a segon param : "canaleta": "Instal·lació d'una Canaleta", []
-
-let indexPages = [
-["aplicainfo"
-    ["txt1.html","txt2.html"]
-],
-["xarxesinfo"
-    ["txt1.html","txt2.html"]
-],
-["templates"
-    ["txt1.html","txt2.html"]
-]
-];
-
-
-*/

@@ -1,4 +1,4 @@
-let modules = [
+const modules = [
     ["aplicainfo","https://github.com/xbaubes/AplicacionsInformatiques","../../aplicainfo/apps.html"],
     ["basesddades","https://github.com/xbaubes/BasesDeDades","../../basesdedades/bdd.html"],
     ["desenvolupaweb","https://github.com/xbaubes/DesenvolupamentWeb","../../desenvolupaweb/web.html"],
