@@ -1,32 +1,64 @@
+### Presentació del projecte
+
 Benvingut al repositori del meu portal de docència informàtica,
 una plataforma dissenyada per oferir recursos educatius de qualitat i fomentar la col·laboració entre estudiants i professors en l'àmbit de la informàtica.
 
-TUTORIAL PER AFEGIR CONTINGUT
+Aquesta aplicació web usa únicament les tecnologies bàsiques de desenvolupament web i sense cap framework:
+- Estructura amb HTML.
+- Estils amb CSS.
+- Interactivitat amb JavaScript.
 
-Crear nou mòdul: Afegir-lo a "data/module.js" i crear carpeta a "modules".
-Exemple: Creem mòdul "M", amb pàgina de referència "https://www.google.com/"
-Creem la carpeta "M" a "modules" amb la pàgina inicial "M.html" copiada de "modules/templates/templateModule.html"
-L'afegim a l'array "modules" de "data/module.js":
-	const modules = [
-		...
-		["M","https://www.google.com/","../../M/M.html"],
-		...
-	];
-Afegim l'enllaç a "index.html" per poder-hi accedir des de la pàgina principal:
-	<div class="grid">
-		...
-		<a href="modules/M/M.html" class="square">M</a>
-		...
-	</div>
+Malgrat la seva simplicitat és fàcilment escalable i mantenible.
 
-Crear contingut al mòdul: Afegir-lo a "data/strings.js" i crear carpeta a la carpeta del mòdul de "modules".
-Exemple: Creem contingut "C" dins la carpeta del mòdul "M", el nom del contingut serà "CTest".
-Creem la carpeta "C" a "modules/M" amb la pàgina inicial "C.html" copiada de "modules/templates/templateModuleContent.html"
-L'afegim a l'objecte "dades" de "data/strings.js":
-const dades = {
-	...
-    "M": {
-        "C": ["CTest","C/C.html"]
-    },
-	...
-};
+---
+
+### Tutorial per afegir mòduls i contingut
+
+**Crear nou mòdul:** Afegir-lo a *data/module.js* i crear carpeta a *modules*.
+Exemple: Creem mòdul *M*, amb pàgina de referència *https://www.google.com/*.
+<ol type="1">
+	<ul>Creem la carpeta "M" a "modules" amb la pàgina inicial "index.html" copiada de "modules/templates/templateModule.html".</ul>
+	<ul>
+		L'afegim a l'array "modules" de "data/module.js":
+		<pre>
+		const modules = [
+		    // Altres mòduls aquí
+		    ["M", "https://www.google.com/", "../../M/index.html"],
+		    // Altres mòduls aquí
+		]; </pre>
+	</ul>
+	<ul>
+		Afegim l'enllaç a "index.html" per poder-hi accedir des de la pàgina principal:
+		<pre>
+		&lt;div class=&quot;grid&quot;&gt;
+		    &lt;!-- Altres mòduls aquí --&gt;
+		    &lt;a href=&quot;modules/M/index.html&quot; class=&quot;square&quot;&gt;M&lt;/a&gt;
+		    &lt;!-- Altres mòduls aquí --&gt;
+		&lt;/div&gt; </pre>
+	</ul>
+</ol>
+
+**Crear contingut al mòdul:** Afegir-lo a *data/strings.js* i crear carpeta a la carpeta del mòdul de *modules*.
+Exemple: Creem contingut *C* dins la carpeta del mòdul *M*, el nom del contingut serà *CTest*.
+<ol type="1">
+	<ul>
+		Creem la carpeta "C" a "modules/M" amb la pàgina inicial "C.html" copiada de "modules/templates/content/templateModuleContent.html"
+	</ul>
+	<ul>
+		L'afegim a l'objecte "dades" de "data/strings.js":
+		<pre>
+		const dades = {
+		    // Altres continguts aquí
+		    "M": {
+		        "C": ["CTest","C/C.html"]
+		    },
+		    // Altres continguts aquí
+		}; </pre>
+	</ul>
+</ol>
+
+#### Exemple del funcionament
+
+Prova online del funcionament de la pàgina amb text i imatges:
+https://xbaubes.github.io/modules/templates/templateModule.html
+
