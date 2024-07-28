@@ -15,6 +15,7 @@ Malgrat la seva simplicitat és fàcilment escalable i mantenible.
 ### Tutorial per afegir mòduls i contingut
 
 **Crear nou mòdul:** Afegir-lo a *data/module.js* i crear carpeta a *modules*.
+
 Exemple: Creem mòdul *M*, amb pàgina de referència *https://www.google.com/*.
 <ol type="1">
 	<ul>Creem la carpeta "M" a "modules" amb la pàgina inicial "index.html" copiada de "modules/templates/templateModule.html".</ul>
@@ -38,12 +39,12 @@ Exemple: Creem mòdul *M*, amb pàgina de referència *https://www.google.com/*.
 	</ul>
 </ol>
 
+
 **Crear contingut al mòdul:** Afegir-lo a *data/strings.js* i crear carpeta a la carpeta del mòdul de *modules*.
+
 Exemple: Creem contingut *C* dins la carpeta del mòdul *M*, el nom del contingut serà *CTest*.
 <ol type="1">
-	<ul>
-		Creem la carpeta "C" a "modules/M" amb la pàgina inicial "C.html" copiada de "modules/templates/content/templateModuleContent.html"
-	</ul>
+	<ul>Creem la carpeta "C" a "modules/M" amb la pàgina inicial "C.html" copiada de "modules/templates/content/templateModuleContent.html".</ul>
 	<ul>
 		L'afegim a l'objecte "dades" de "data/strings.js":
 		<pre>
