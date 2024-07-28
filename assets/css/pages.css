@@ -61,6 +61,10 @@ nav #titlePageDiv {
     color: var(--color-title-darker);
 }
 
+.content {
+    scroll-margin-top: 65px; /* desplacament per evitar sticky nav */
+}
+
 .scroll-to-top {
     position: fixed;
 	display: none;
