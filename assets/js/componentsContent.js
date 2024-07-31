@@ -26,3 +26,42 @@ if (arrowTop !== undefined) {
     </a>
     `;
 }
+
+/* menu desplegable */
+
+document.querySelector('#imgBar').addEventListener('click', function() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    var imgBar = document.querySelector('#imgBar');
+
+    // Comprova si el menu esta visible i canvia el src de la imatge
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+        imgBar.src = '../../../assets/icons/chevron-down.svg'; // Restaurar la imatge original
+    } else {
+        dropdownContent.style.display = 'block';
+        imgBar.src = '../../../assets/icons/chevron-up.svg';
+    }
+});
+
+window.onclick = function(event) { // tanca el menu si es fa clic fora o es fa scroll
+    if (!event.target.matches('#imgBar')) {
+        closeDropdown();
+    }
+}
+
+window.onscroll = function() {
+    closeDropdown();
+}
+
+function closeDropdown() {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var imgBar = document.querySelector('#imgBar');
+
+    for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.style.display === "block") {
+            openDropdown.style.display = "none";
+            imgBar.src = '../../../assets/icons/chevron-down.svg'; // Restaurar la imatge original
+        }
+    }
+}

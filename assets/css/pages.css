@@ -5,6 +5,7 @@
     --color-arrowup-hover: orange;
     --menu-section: #f0f0f0;
     --darkest: black;
+    --dark: #333;
     --middle-dark: grey;
     --image-padding: #fff3e0;
     --margin-image: 16px 0;
@@ -25,15 +26,6 @@ nav .icon-container-div {
 nav #titlePageDiv {
     float: right;
     white-space: nowrap;
-}
-
-.titleBar {
-    background-color: var(--color-nav);
-    border: solid 2px var(--color-title);
-    color: var(--color-title);
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
 }
 
 .menu {
@@ -98,6 +90,79 @@ nav #titlePageDiv {
 article section.content {
     text-align: left;
 }
+
+/* menu desplegable */
+
+.chevron-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.titleBar {
+    background-color: var(--color-nav);
+    border: solid 2px var(--color-title);
+    color: var(--color-title);
+    padding: 10px;
+    border-radius: 8px;
+    /* text-align: center; */
+    /* position: relative; */
+    display: flex; /* Utilitza flexbox per alinear els elements dins de la barra */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+/* Centra el txtBar */
+#txtBar {
+    flex: 1; /* Permet que el text s expandeixi ocupant tot l espai disponible */
+    /* text-align: center; */
+}
+
+/* Contenidor per al desplegable i imgBar */
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+    /* margin-left: auto; */
+}
+
+#imgBar {
+    cursor: pointer;
+    padding: 0 5px 0 15px;
+}
+
+/* Contingut desplegable (ocult per defecte) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Assegura que el contingut desplegable estigui alineat amb imgBar */
+    background-color: var(--dark);
+    min-width: 150px;
+    max-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    font-size: 15px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Enllacos del menu desplegable */
+.dropdown-content a {
+    color: var(--color-title);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Canviar el color en passar per sobre */
+.dropdown-content a:hover {
+    background-color: var(--image-padding);
+}
+
+/*
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
 
 /*** big-image-container ***/
 

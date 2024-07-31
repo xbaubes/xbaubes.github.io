@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const indexTxt = decodeURIComponent(params.get("page"));
 
 //l usem com a titol de la pagina
-document.getElementsByClassName("titleBar")[0].textContent = indexTxt;
+document.getElementById("txtBar").textContent = indexTxt;
 
 let showTitlePageDiv = false;
 window.addEventListener('scroll', function() {
@@ -43,7 +43,9 @@ window.addEventListener('scroll', function() {
 	}
 });
 
-/* TO DO : nav with other activities of module */
+/* nav with other activities of module */
+
+let dd = document.querySelector(".dropdown .dropdown-content");
 
 function navModule(param)
 {
@@ -53,9 +55,20 @@ function navModule(param)
             const valor = dadesFromTxt[clau];
 			if(indexTxt != valor[0])
 			{
-				//only show results on console (TO DO)
-				console.log(valor[0]);
-				console.log(valor[1]);
+				var link = document.createElement('a');
+				var index = valor[1].indexOf('/');
+				var newString;
+				if (index !== -1) {
+					// Crear la nova cadena eliminant tot abans del primer '/'
+					newString = valor[1].substring(index + 1);
+					link.href = newString + '?page=' + encodeURIComponent(valor[0]);
+				} else {
+					link.href = valor[1] + '?page=' + encodeURIComponent(valor[0]);
+				}
+				link.textContent = valor[0];
+				link.className = 'dropdown-link';
+				var container = document.querySelector('.dropdown .dropdown-content');
+				container.appendChild(link);
 			}
         }
     }
