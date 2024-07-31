@@ -31,15 +31,15 @@ if (arrowTop !== undefined) {
 
 document.querySelector('#imgBar').addEventListener('click', function() {
     var dropdownContent = document.querySelector('.dropdown-content');
-    var imgBar = document.querySelector('#imgBar');
+    let imgBar = document.querySelector('#imgBar');
 
     // Comprova si el menu esta visible i canvia el src de la imatge
     if (dropdownContent.style.display === 'block') {
         dropdownContent.style.display = 'none';
-        imgBar.src = '../../../assets/icons/chevron-down.svg'; // Restaurar la imatge original
+        imgBar.src = '../../../assets/icons/chevron-down-color.svg'; // Restaurar la imatge original
     } else {
         dropdownContent.style.display = 'block';
-        imgBar.src = '../../../assets/icons/chevron-up.svg';
+        imgBar.src = '../../../assets/icons/chevron-up-color.svg';
     }
 });
 
@@ -55,13 +55,15 @@ window.onscroll = function() {
 
 function closeDropdown() {
     var dropdowns = document.getElementsByClassName("dropdown-content");
-    var imgBar = document.querySelector('#imgBar');
+    let imgBar = document.querySelector('#imgBar');
 
     for (var i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
         if (openDropdown.style.display === "block") {
             openDropdown.style.display = "none";
-            imgBar.src = '../../../assets/icons/chevron-down.svg'; // Restaurar la imatge original
+            imgBar.src = '../../../assets/icons/chevron-down-color.svg'; // Restaurar la imatge original
         }
     }
 }
+
+/* menu desplegable (sticky bar - TO DO) */

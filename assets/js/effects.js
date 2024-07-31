@@ -33,11 +33,18 @@ window.addEventListener('scroll', function() {
 	if (window.scrollY >= 100 && !showTitlePageDiv) {
 		if (titlePageDiv !== undefined) {
 			titlePageDiv.innerText = indexTxt;
+			var img = document.createElement('img');
+			img.src = '../../../assets/icons/chevron-down.svg';
+			img.alt = 'Desplegable';
+			img.id = 'imgStickyNavId';
+			img.className = 'imgStickyNav';
+			titlePageDiv.appendChild(img);
+
 			showTitlePageDiv = true;
 		}
 	} else if (window.scrollY < 100) {
 		if (titlePageDiv !== undefined) {
-			titlePageDiv.innerText = "";
+			//titlePageDiv.innerText = "";
 			showTitlePageDiv = false;
 		}
 	}
@@ -81,3 +88,5 @@ for(let ele of modules)
         navModule(dades[ele[0]]);
     }
 }
+
+/* nav with other activities of module (sticky bar - TO DO) */

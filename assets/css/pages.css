@@ -26,6 +26,11 @@ nav .icon-container-div {
 nav #titlePageDiv {
     float: right;
     white-space: nowrap;
+    display: flex;
+    align-items: flex-end; /* Alinea els elements amb la base inferior del contenidor */
+}
+nav #titlePageDiv:hover {
+    cursor: pointer;
 }
 
 .menu {
@@ -93,10 +98,13 @@ article section.content {
 
 /* menu desplegable */
 
-.chevron-icon {
+.chevron-icon , .imgStickyNav {
     width: 20px;
     height: 20px;
     margin-top: 4px;
+}
+.imgStickyNav {
+    margin-left: 10px;
 }
 
 .titleBar {
@@ -112,13 +120,11 @@ article section.content {
     /* justify-content: center; */
 }
 
-/* Centra el txtBar */
 #txtBar {
     flex: 1; /* Permet que el text s expandeixi ocupant tot l espai disponible */
     /* text-align: center; */
 }
 
-/* Contenidor per al desplegable i imgBar */
 .dropdown {
     position: relative;
     /* display: inline-block; */
@@ -127,7 +133,7 @@ article section.content {
 
 #imgBar {
     cursor: pointer;
-    padding: 0 5px 0 15px;
+    padding: 0 8px 0 8px;
 }
 
 /* Contingut desplegable (ocult per defecte) */
@@ -163,6 +169,20 @@ article section.content {
     display: block;
 }
 */
+
+/* menu desplegable (sticky bar) TO DO */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*** big-image-container ***/
 
