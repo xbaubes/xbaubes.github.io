@@ -44,7 +44,7 @@ window.addEventListener('scroll', function() {
 		}
 	} else if (window.scrollY < 100) {
 		if (titlePageDiv !== undefined) {
-			//titlePageDiv.innerText = "";
+			titlePageDiv.innerText = "";
 			showTitlePageDiv = false;
 		}
 	}
