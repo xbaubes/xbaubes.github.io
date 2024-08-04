@@ -31,11 +31,12 @@ if (arrowTop !== undefined) {
 
 var imgBar = document.querySelector('#imgBar');
 var dropdownContent = document.querySelector('#mainNav');
+const imgNormalChevron = '../../../assets/icons/chevron-down-color.svg';
 
-function closeDropdown() {
+function closeDropdown(dropdownContent,imgBar,imgNormalChevron) {
     if (dropdownContent.style.display === 'block') {
         dropdownContent.style.display = 'none';
-        imgBar.src = '../../../assets/icons/chevron-down-color.svg'; // Restaurar la imatge original
+        imgBar.src = imgNormalChevron; // Restaurar la imatge original
     }
 }
 
@@ -45,7 +46,7 @@ imgBar.addEventListener('click', function(event) {
 
     // Comprova si el menu es visible i canvia el src de la imatge
     if (dropdownContent.style.display === 'block') {
-        closeDropdown();
+        closeDropdown(dropdownContent,imgBar,imgNormalChevron);
     } else {
         dropdownContent.style.display = 'block';
         imgBar.src = '../../../assets/icons/chevron-up-color.svg';
@@ -55,13 +56,145 @@ imgBar.addEventListener('click', function(event) {
 document.addEventListener('click', function(event) {
     // Comprova si el dropdown es visible i si es fa clic fora d ell
     if (!dropdownContent.contains(event.target) && !imgBar.contains(event.target)) {
-        closeDropdown();
+        closeDropdown(dropdownContent,imgBar,imgNormalChevron);
     }
 });
 
-// Scoll
+// Scroll
 window.addEventListener('scroll', function() {
-    closeDropdown();
+    closeDropdown(dropdownContent,imgBar,imgNormalChevron);
 });
 
-/* menu desplegable (sticky bar - TO DO) */
+/***** EFFECTS *****/
+
+//obtenim el valor del parametre page de la URL
+const params = new URLSearchParams(window.location.search);
+const indexTxt = decodeURIComponent(params.get("page"));
+
+//l usem com a titol de la pagina
+document.getElementById("txtBar").textContent = indexTxt;
+
+let showTitlePageDiv = false;
+window.addEventListener('scroll', function() {
+	var image = document.getElementsByClassName('scroll-to-top')[0];
+	var nav = document.getElementsByTagName('nav')[0];
+	var navDiv = document.getElementsByClassName('icon-container-div')[0];
+	var titlePageDiv = document.getElementById('titlePageDiv');
+	if (window.scrollY > 0) {
+		image.style.display = 'block';
+		nav.style.margin = '0px';
+		nav.style.width = '100%';
+		nav.style.backgroundColor = 'var(--color-nav)';
+		nav.style.padding = '20px 0 20px 0';
+		if (navDiv !== undefined) navDiv.style.width = '80%';
+	} else {
+		image.style.display = 'none';
+		nav.style.margin = '0 auto';
+		nav.style.width = '80%';
+		nav.style.backgroundColor = '';
+		nav.style.padding = '20px';
+		if (navDiv !== undefined) navDiv.style.width = '100%';
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = "";
+			showTitlePageDiv = false;
+		}
+	}
+	if (window.scrollY >= 100 && !showTitlePageDiv) {
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = indexTxt;
+
+			var dropdownDiv = document.createElement('div');
+			dropdownDiv.className = 'dropdown';
+
+			var img = document.createElement('img');
+			img.src = '../../../assets/icons/chevron-down.svg';
+			img.alt = 'Desplegable';
+			img.id = 'imgStickyNavId';
+			img.className = 'chevron-icon';
+
+			var dropdownContent = document.createElement('div');
+			dropdownContent.id = 'secNav';
+			dropdownContent.className = 'dropdown-content';
+
+			dropdownDiv.appendChild(img);
+			dropdownDiv.appendChild(dropdownContent);
+			
+			titlePageDiv.appendChild(dropdownDiv);
+
+			let url = window.location.href;
+			for(let ele of modules)
+			{
+				if (url.includes(ele[0])) {
+					navModule(dropdownContent,dades[ele[0]]);
+				}
+			}
+
+            img.addEventListener('click', function(event) {
+
+                event.stopPropagation();
+
+                if (dropdownContent.style.display === 'block') {
+                    closeDropdown(dropdownContent,img,'../../../assets/icons/chevron-down.svg');
+                } else {
+                    dropdownContent.style.display = 'block';
+                    img.src = '../../../assets/icons/chevron-up.svg';
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!dropdownContent.contains(event.target) && !img.contains(event.target)) {
+                    closeDropdown(dropdownContent,img,'../../../assets/icons/chevron-down.svg');
+                }
+            });
+
+            window.addEventListener('scroll', function() {
+                closeDropdown(dropdownContent,img,'../../../assets/icons/chevron-down.svg');
+            });
+
+			showTitlePageDiv = true;
+		}
+	} else if (window.scrollY < 100) {
+		if (titlePageDiv !== undefined) {
+			titlePageDiv.innerText = "";
+			showTitlePageDiv = false;
+		}
+	}
+});
+
+/* nav with other activities of module */
+
+let dd = document.querySelector("#mainNav");
+
+function navModule(ddi,param)
+{
+    let dadesFromTxt = param;
+    for (const clau in dadesFromTxt) {
+        if (dadesFromTxt.hasOwnProperty(clau)) {
+            const valor = dadesFromTxt[clau];
+			if(indexTxt != valor[0])
+			{
+				var link = document.createElement('a');
+				var index = valor[1].indexOf('/');
+				var newString;
+				if (index !== -1) {
+					// Crear la nova cadena eliminant tot abans del primer '/'
+					newString = valor[1].substring(index + 1);
+					link.href = newString + '?page=' + encodeURIComponent(valor[0]);
+				} else {
+					link.href = valor[1] + '?page=' + encodeURIComponent(valor[0]);
+				}
+				link.textContent = valor[0];
+				link.className = 'dropdown-link';
+				ddi.appendChild(link);
+			}
+        }
+    }
+}
+
+let url = window.location.href;
+for(let ele of modules)
+{
+    if (url.includes(ele[0])) {
+        navModule(dd,dades[ele[0]]);
+    }
+}
