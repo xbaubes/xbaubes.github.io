@@ -18,9 +18,9 @@ Malgrat la seva simplicitat és fàcilment escalable i mantenible.
 
 Exemple: Creem mòdul *M*, amb pàgina de referència *https://www.google.com/*.
 <ol type="1">
-	<ul>Creem la carpeta "M" a "modules" amb la pàgina inicial "index.html" copiada de "modules/templates/templateModule.html".</ul>
+	<ul>Creem la carpeta "M" dins la carpeta "modules" i en creem la pàgina inicial "index.html" copiada de "modules/templates/templateModule.html".</ul>
 	<ul>
-		L'afegim a l'array "modules" de "data/module.js":
+		N'afegim el nom a l'array "modules" de "data/module.js":
 		<pre>
 		const modules = [
 		    // Altres mòduls aquí
@@ -29,7 +29,7 @@ Exemple: Creem mòdul *M*, amb pàgina de referència *https://www.google.com/*.
 		]; </pre>
 	</ul>
 	<ul>
-		Afegim l'enllaç a "index.html" per poder-hi accedir des de la pàgina principal:
+		Afegim l'enllaç a "index.html" per poder-hi accedir des de la pàgina principal del lloc web:
 		<pre>
 		&lt;div class=&quot;grid&quot;&gt;
 		    &lt;!-- Altres mòduls aquí --&gt;
