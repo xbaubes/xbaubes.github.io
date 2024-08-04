@@ -3,7 +3,7 @@
     --color-nav: #FFE5CC;
     --color-title-darker: orangered;
     --color-arrowup-hover: orange;
-    --menu-section: #f0f0f0;
+    --menu-section: #ffdab95e;
     --darkest: black;
     --dark: #333;
     --middle-dark: grey;
@@ -35,7 +35,7 @@ nav #titlePageDiv:hover {
 
 .menu {
     background-color: var(--menu-section);
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .menu ul {
@@ -46,16 +46,24 @@ nav #titlePageDiv:hover {
 
 .menu ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 .menu ul li a {
     text-decoration: none;
     color: var(--darkest);
+    background-color: rgba(237, 221, 203, 0.523);
+    border-radius: 4px;
+    padding: 4px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul li:not(:last-child) a {
+    margin-bottom: 4px;
 }
 
 .menu ul li a:hover {
-    color: var(--color-title-darker);
+    background-color: var(--color-title);
 }
 
 .content {
