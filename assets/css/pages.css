@@ -4,6 +4,7 @@
     --color-title-darker: orangered;
     --color-arrowup-hover: orange;
     --menu-section: #ffdab95e;
+    --menu-link: rgb(237, 199, 166);
     --darkest: black;
     --dark: #333;
     --middle-dark: grey;
@@ -51,7 +52,7 @@ nav #titlePageDiv:hover {
 .menu ul li a {
     text-decoration: none;
     color: var(--darkest);
-    background-color: rgba(237, 221, 203, 0.523);
+    background-color: var(--menu-link);
     border-radius: 4px;
     padding: 4px;
     display: block;
