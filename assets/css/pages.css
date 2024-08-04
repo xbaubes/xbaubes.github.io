@@ -234,6 +234,9 @@ article section.content .double-image-container img {
     article section.content .double-image-container img:first-child {
         margin-bottom: 10px;
     }
+    article section.content .double-image-container img {
+        max-width: 100%;
+    }
 }
 
 /*** triple-image-container ***/
