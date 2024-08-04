@@ -30,7 +30,7 @@ nav #titlePageDiv {
     display: flex;
     align-items: flex-end; /* Alinea els elements amb la base inferior del contenidor */
 }
-nav #titlePageDiv:hover {
+nav #titlePageDiv #imgStickyNavId:hover {
     cursor: pointer;
 }
 
