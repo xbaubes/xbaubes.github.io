@@ -29,41 +29,39 @@ if (arrowTop !== undefined) {
 
 /* menu desplegable */
 
-document.querySelector('#imgBar').addEventListener('click', function() {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    let imgBar = document.querySelector('#imgBar');
+var imgBar = document.querySelector('#imgBar');
+var dropdownContent = document.querySelector('#mainNav');
 
-    // Comprova si el menu esta visible i canvia el src de la imatge
+function closeDropdown() {
     if (dropdownContent.style.display === 'block') {
         dropdownContent.style.display = 'none';
         imgBar.src = '../../../assets/icons/chevron-down-color.svg'; // Restaurar la imatge original
+    }
+}
+
+imgBar.addEventListener('click', function(event) {
+    // Evita que el clic a imgBar propagui fins al document
+    event.stopPropagation();
+
+    // Comprova si el menu es visible i canvia el src de la imatge
+    if (dropdownContent.style.display === 'block') {
+        closeDropdown();
     } else {
         dropdownContent.style.display = 'block';
         imgBar.src = '../../../assets/icons/chevron-up-color.svg';
     }
 });
 
-window.onclick = function(event) { // tanca el menu si es fa clic fora o es fa scroll
-    if (!event.target.matches('#imgBar')) {
+document.addEventListener('click', function(event) {
+    // Comprova si el dropdown es visible i si es fa clic fora d ell
+    if (!dropdownContent.contains(event.target) && !imgBar.contains(event.target)) {
         closeDropdown();
     }
-}
+});
 
-window.onscroll = function() {
+// Scoll
+window.addEventListener('scroll', function() {
     closeDropdown();
-}
-
-function closeDropdown() {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    let imgBar = document.querySelector('#imgBar');
-
-    for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.style.display === "block") {
-            openDropdown.style.display = "none";
-            imgBar.src = '../../../assets/icons/chevron-down-color.svg'; // Restaurar la imatge original
-        }
-    }
-}
+});
 
 /* menu desplegable (sticky bar - TO DO) */

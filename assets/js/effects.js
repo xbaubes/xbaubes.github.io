@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
 
 /* nav with other activities of module */
 
-let dd = document.querySelector(".dropdown .dropdown-content");
+let dd = document.querySelector("#mainNav");
 
 function navModule(param)
 {
@@ -74,8 +74,7 @@ function navModule(param)
 				}
 				link.textContent = valor[0];
 				link.className = 'dropdown-link';
-				var container = document.querySelector('.dropdown .dropdown-content');
-				container.appendChild(link);
+				dd.appendChild(link);
 			}
         }
     }
