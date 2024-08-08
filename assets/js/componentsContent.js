@@ -125,7 +125,7 @@ window.addEventListener('scroll', function() {
 			for(let ele of modules)
 			{
 				if (url.includes(ele[0])) {
-					navModule(dropdownContent,dades[ele[0]]);
+					navModule(url,dropdownContent,dades[ele[0]]);
 				}
 			}
 
@@ -165,7 +165,7 @@ window.addEventListener('scroll', function() {
 
 let dd = document.querySelector("#mainNav");
 
-function navModule(ddi,param)
+function navModule(url,ddi,param)
 {
     let dadesFromTxt = param;
     for (const clau in dadesFromTxt) {
@@ -174,15 +174,7 @@ function navModule(ddi,param)
 			if(indexTxt != valor[0])
 			{
 				var link = document.createElement('a');
-				var index = valor[1].indexOf('/');
-				var newString;
-				if (index !== -1) {
-					// Crear la nova cadena eliminant tot abans del primer '/'
-					newString = valor[1].substring(index + 1);
-					link.href = newString + '?page=' + encodeURIComponent(valor[0]);
-				} else {
-					link.href = valor[1] + '?page=' + encodeURIComponent(valor[0]);
-				}
+				link.href = "../" + valor[1] + '?page=' + encodeURIComponent(valor[0]);
 				link.textContent = valor[0];
 				link.className = 'dropdown-link';
 				ddi.appendChild(link);
@@ -195,6 +187,6 @@ let url = window.location.href;
 for(let ele of modules)
 {
     if (url.includes(ele[0])) {
-        navModule(dd,dades[ele[0]]);
+        navModule(url,dd,dades[ele[0]]);
     }
 }
