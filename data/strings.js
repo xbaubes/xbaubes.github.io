@@ -1,7 +1,7 @@
 const dades = {
     "desenvolupaweb": {
         "apirest": ["API REST","apirest/apirest.html"],
-        "xampp": ["XAMPP : Posada en funcionament","xampp/xampp.html"]
+        "xampp": ["XAMPP: Conceptes bàsics","xampp/xampp.html"]
     },
     "xarxesinfo": {
         "canaleta": ["Instal·lació d'una Canaleta","canaleta/canaleta.html"]

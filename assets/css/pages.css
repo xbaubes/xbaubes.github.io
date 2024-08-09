@@ -154,8 +154,8 @@ article section.content {
     position: absolute;
     right: 0; /* Assegura que el contingut desplegable estigui alineat amb imgBar */
     background-color: var(--dark);
-    min-width: 150px;
-    max-width: 250px;
+    /*min-width: 150px;*/
+    /*max-width: 250px;*/
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     z-index: 1;
     font-size: 15px;
