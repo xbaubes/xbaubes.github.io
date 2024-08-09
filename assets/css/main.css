@@ -51,10 +51,10 @@ article {
     color: var(--color-p);
 }
 
+/*
 article a {
     color: var(--color-square);
 }
-/*
 article a:hover {
     text-decoration: none;
 }

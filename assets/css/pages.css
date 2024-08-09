@@ -358,4 +358,5 @@ article section.content .small-image-center  {
 
 article section.content .small-image-center img {
     border: 1px solid black;
+    max-width: 100%;
 }
