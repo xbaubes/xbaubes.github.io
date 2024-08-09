@@ -13,7 +13,9 @@
     --margin-image: 16px 0;
     --color-title-translucid: rgba(255, 123, 0, 0.5);
 }
-
+article {
+    overflow: hidden; /* Amaga el contingut que excedeix el contenidor */
+}
 article section.content {
     text-align: left;
     scroll-margin-top: 65px; /* desplacament per evitar sticky nav */
