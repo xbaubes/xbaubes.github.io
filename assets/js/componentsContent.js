@@ -27,6 +27,14 @@ if (arrowTop !== undefined) {
     `;
 }
 
+document.querySelectorAll('article section.content a').forEach(function(link) {
+    // Afegeix un esdeveniment de clic a cada enllaç
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita el comportament per defecte de l'enllaç
+        window.open(this.href, '_blank'); // Obre l'URL en una nova finestra o pestanya
+    });
+}); /* tots els enllacos de content s obren a una nova finestra */
+
 /* menu desplegable */
 
 var imgBar = document.querySelector('#imgBar');

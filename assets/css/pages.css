@@ -8,9 +8,27 @@
     --darkest: black;
     --dark: #333;
     --middle-dark: grey;
+    --soft-dark: #d3d3d3;
     --image-padding: #fff3e0;
     --margin-image: 16px 0;
     --color-title-translucid: rgba(255, 123, 0, 0.5);
+}
+
+article section.content {
+    text-align: left;
+    scroll-margin-top: 65px; /* desplacament per evitar sticky nav */
+}
+article section.content h3 {
+    margin-top: 50px;
+}
+article section.content code:not(pre code) {
+    background-color: var(--soft-dark);
+}
+article section.content pre {
+    background-color: var(--dark);
+    color: var(--image-padding);
+    overflow-x: auto; /* Afegeix una barra de desplacament horitzontal si cal */
+    text-align: left;
 }
 
 nav {
@@ -34,22 +52,23 @@ nav #titlePageDiv #imgStickyNavId:hover {
     cursor: pointer;
 }
 
-.menu {
+article section.menu {
     background-color: var(--menu-section);
     padding: 10px 15px;
+    margin: 20px 0 50px 0;
 }
 
-.menu ul {
+article section.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.menu ul li {
+article section.menu ul li {
     display: inline;
 }
 
-.menu ul li a {
+article section.menu ul li a {
     text-decoration: none;
     color: var(--darkest);
     background-color: var(--menu-link);
@@ -59,17 +78,15 @@ nav #titlePageDiv #imgStickyNavId:hover {
     transition: background-color 0.3s ease;
 }
 
-.menu ul li:not(:last-child) a {
+article section.menu ul li:not(:last-child) a {
     margin-bottom: 4px;
 }
 
-.menu ul li a:hover {
+article section.menu ul li a:hover {
     background-color: var(--color-title);
 }
 
-.content {
-    scroll-margin-top: 65px; /* desplacament per evitar sticky nav */
-}
+
 
 .scroll-to-top {
     position: fixed;
@@ -99,10 +116,6 @@ nav #titlePageDiv #imgStickyNavId:hover {
     width: 20px;
     height: 20px;
     margin-top: 4px;
-}
-
-article section.content {
-    text-align: left;
 }
 
 /* menu desplegable */
@@ -181,20 +194,6 @@ article section.content {
     display: block;
 }
 */
-
-/* menu desplegable (sticky bar) TO DO */
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*** big-image-container ***/
 
@@ -347,4 +346,16 @@ article section.content .small-image-container-text {
         max-width: 100%;
         vertical-align: bottom;
     }
+}
+
+/*** small-image-center ***/
+
+article section.content .small-image-center  {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+article section.content .small-image-center img {
+    border: 1px solid black;
 }
