@@ -43,187 +43,117 @@
 
             <section class="menu">
                 <ul>
-                    <li><a href="#id1">1</a></li>
-                    <li><a href="#id2">2</a></li>
-                    <li><a href="#id3">3</a></li>
-                    <li><a href="#id4">4</a></li>
-                    <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
-                    <li><a href="#id6">6</a></li>
-                    <li><a href="#id7">7</a></li>
-                    <li><a href="#id8">8</a></li>
-                    <li><a href="#id9">9</a></li>
-                    <li><a href="#id10">10</a></li>
+                    <li><a href="#intro">Introducció</a></li>
+                    <li><a href="#id1">Instal·lació i validació</a></li>
+                    <li><a href="#id2">Activitat 1: Projecte web de prova</a></li>
+                    <li><a href="#id3">Activitat 2: Configuració</a></li>
+                    <li><a href="#id4">Activitat 3: Base de dades</a></li>
+                    <li><a href="#id5">Bibliografia i Webgrafia</a></li>
                 </ul>
             </section>
 
             <section id="intro" class="content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <div class="small-float-image-container">
+                    <img src="xampp.png" alt="XAMPP logo">
+                </div>
+                <p>XAMPP proporciona una solució empaquetada que facilita la instal·lació i configuració ràpida d'un entorn de desenvolupament local complet. No és una solució pensada per ser usada en un servidor en producció. Inclou el següent software:</p>
+                <ul>
+                    <li>Apache: Servidor web que permet servir pàgines web a través d'internet.</li>
+                    <li>MariaDB (anteriorment incloïa MySQL): Sistema de gestió de bases de dades relacional. Aquest sistema emmagatzema dades de manera estructurada i permet la consulta i manipulació de les dades mitjançant llenguatges com SQL.</li>
+                    <li>PHP i Perl: Llenguatges de programació del costat del servidor. PHP està dissenyat principalment per al desenvolupament web i és utilitzat per crear pàgines web dinàmiques, és a dir, pàgines que poden canviar el seu contingut en funció de les interaccions dels usuaris.</li>
+                    <li>phpMyAdmin: Eina per gestionar bases de dades MySQL/MariaDB a través d'una interfície gràfica.</li>
+                </ul>
             </section>
             
             <section id="id1" class="content">
-                <h3>1111111111111</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <h3>Instal·lació i validació</h3>
+                <p>Primerament, cal descarregar XAMPP, pots fer-ho des de la pàgina oficial: <a href="https://www.apachefriends.org/es/download.html">https://www.apachefriends.org/es/download.html</a>.</p>
+                <p>Un cop instal·lat i en execució es mostrarà la GUI, el XAMPP Control Panel, des d’on pots iniciar els serveis prement «Start» o aturar-los prement «Stop». Fixa’t que Apache usa els ports 80 i 443 per gestionar les comunicacions HTTP i HTTPS respectivament.</p>
+
+                <div class="big-image-container">
+                    <img src="xampp-gui.png"
+                    alt="XAMPP Control Panel">
+                </div>
+
+                <p>Habilita el servidor web. Per comprovar que Apache funciona correctament pots accedir a: <a href="http://localhost/">http://localhost/</a>.</p>
+                <p>Habilita el servidor de base de dades. Per comprovar que MariaDB funciona correctament pots accedir a: <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a>.</p>
+                <p>«Localhost» fa referència a l’ordinador local en el qual estàs treballant, és equivalent a «127.0.0.1».</p>
+                <p>Pots accedir a aquestes URL prement el botó «Admin» de la fila del servei respectiu.</p>
             </section>
 
             <section id="id2" class="content">
-                <h3>2</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac 
-                </p>
+                <h3>Activitat 1: Projecte web de prova</h3>
+                <p>Crea una nova carpeta per al teu projecte web dins el directori per als fitxers web, en Windows, el directori per defecte és: «C:\xampp\htdocs».</p>
+                <p>Dins la nova carpeta creada pel teu projecte crea un fitxer de nom «index.php», per defecte, el servidor web cerca un fitxer amb aquest nom per obrir-lo com a pàgina principal.</p>
+                <p>El codi PHP es col·loca dins les següents etiquetes especials: <code>&lt;?php ... ?&gt;</code>. Aquestes etiquetes indiquen al servidor web que el contingut entre elles ha de ser processat com a codi PHP. Afegeix-li el següent codi:</p>
+                <pre><code>
+                    &lt;h1&gt;Això és codi HTML&lt;/h1&gt;
+                    &lt;?php
+                        echo "&lt;h1&gt;Això és codi PHP&lt;/h1&gt;";
+                    ?&gt;
+                </code></pre>
+                <p>Obre un navegador i introdueix la URL del teu projecte, per exemple: <a href="http://localhost/nom-projecte">http://localhost/nom-projecte</a> o li pots especificar el fitxer a obrir: <a href="http://localhost/nom-projecte/index.php">http://localhost/nom-projecte/index.php</a>.</p>
+
+                <div class="small-image-center">
+                    <img src="xampp-browser.png"
+                    alt="XAMPP browser HTML PHP">
+                </div>
             </section>
 
             <section id="id3" class="content">
-                <h3>3</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <h3>Activitat 2: Configuració</h3>
+                <p>Modificació del fus horari. Localitza el fitxer <code>php.ini</code> a <code>C:\xampp\php\php.ini</code>, pots accedir-hi des del botó "Config" corresponent al servei d'Apache.</p>
+                <p>Obre el fitxer <code>php.ini</code> per establir la zona horària (<code>date.timezone</code>) a «Europe/Madrid». Investiga com fer-ho.</p>
+                <p>Un cop modificat el fitxer, reinicia el servei perquè els canvis es duguin a terme.</p>
+                <p>Per comprovar la configuració de PHP al servidor crea un fitxer <code>info.php</code> i escriu el següent codi:</p>
+                <pre><code>
+                    &lt;?php
+                        phpinfo();
+                    ?&gt;
+                </code></pre>
+                <p>Obre el fitxer des del navegador i cerca la informació sobre la data:</p>
+                <div class="big-image-container">
+                    <img src="xampp-php.ini.png"
+                    alt="XAMPP PHP.ini">
+                </div>
             </section>
 
             <section id="id4" class="content">
-                <h3>4</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <h3>Activitat 3: Base de dades</h3>
+                <p>Crearem i gestionarem una base de dades amb phpMyAdmin.</p>
+                <p>A phpMyAdmin, fes clic a la pestanya "Bases de dades". Anomenarem la base de dades "naturalesa". Introdueix el nom i fes clic a "Crear".</p>
+                <p>Selecciona la base de dades creada i creem dos taules:</p>
+                <ul>
+                    <li>Crea una taula anomenada "ecosistema" amb els següents camps:
+                        <ul>
+                            <li>id (INT, Auto Increment, Clau Primària)</li>
+                            <li>nom (VARCHAR(50))</li>
+                        </ul>
+                    </li>
+                    <li>Crea una taula anomenada "animal" amb els següents camps:
+                        <ul>
+                            <li>id (INT, Auto Increment, Clau Primària)</li>
+                            <li>nom (VARCHAR(50))</li>
+                            <li>id_ecosistema (INT) (Clau Forana que fa referència a l'id de la taula ecosistema)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Des de la pestanya «Dissenyador» en podem veure els resultats.</p>
+                <div class="small-image-center">
+                    <img src="xampp-phpMyAdmin.png"
+                    alt="XAMPP phpMyAdmin">
+                </div>
+                <p>Si seleccionem una taula, des de la pestanya «Insereix» podem afegir els següents registres a les taules creades:</p>
+                <div class="small-image-center">
+                    <img src="bdd-naturalesa.jpg"
+                    alt="Base de dades naturalesa">
+                </div>
+                <p>Pots usar sentències SQL per gestionar la base de dades. En el següent enllaç trobaràs les sentències SQL necessàries amb un exemple per veure la seva sintaxis: <a href="https://github.com/xbaubes/BasesDeDades/wiki/Sent%C3%A8ncies-SQL">Sentències SQL</a>.</p>
             </section>
 
             <section id="id5" class="content">
-                <h3>5</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id6" class="content">
-                <h3>6</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id7" class="content">
-                <h3>7</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id8" class="content">
-                <h3>8</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id9" class="content">
-                <h3>9</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-            </section>
-
-            <section id="id10" class="content">
-                <h3>10</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-
+                <h3>Bibliografia i Webgrafia</h3>
+                <p>«Javatpoint». <a href="https://www.javatpoint.com/xampp">https://www.javatpoint.com/xampp</a></p>
             </section>
 
         </article>
