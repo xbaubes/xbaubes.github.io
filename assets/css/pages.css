@@ -199,7 +199,7 @@ article section.menu ul li a:hover {
 
 /*** big-image-container ***/
 
-article section.content .big-image-container {
+article section.content .big-image-container , article section.content .medium-image-container {
     text-align: center;
     background-color: var(--image-padding);
     margin: var(--margin-image);
@@ -207,6 +207,15 @@ article section.content .big-image-container {
 article section.content .big-image-container img {
     vertical-align: bottom;
     width: calc(100% - (220 * (100vw - 1000px) / 500));
+    max-width: 100%;
+    height: auto;
+}
+
+/*** medium-image-container ***/
+
+article section.content .medium-image-container img {
+    vertical-align: bottom;
+    width: calc((100% - (220 * (100vw - 1000px) / 500)) / 1,5);
     max-width: 100%;
     height: auto;
 }
