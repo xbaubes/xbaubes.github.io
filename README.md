@@ -6,7 +6,7 @@ una plataforma dissenyada per oferir recursos educatius de qualitat i fomentar l
 Aquesta aplicació web usa únicament les tecnologies bàsiques de desenvolupament web i sense cap framework:
 - Estructura amb HTML.
 - Estils amb CSS.
-- Interactivitat amb JavaScript.
+- Interactivitat i gestió de dades amb JavaScript.
 
 Malgrat la seva simplicitat és fàcilment escalable i mantenible.
 
