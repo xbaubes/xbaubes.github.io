@@ -40,192 +40,84 @@
                     <div id="mainNav" class="dropdown-content"></div>
                 </div>
             </h1>
-<!--
+
             <section class="menu">
                 <ul>
-                    <li><a href="#id1">1</a></li>
-                    <li><a href="#id2">2</a></li>
-                    <li><a href="#id3">3</a></li>
-                    <li><a href="#id4">4</a></li>
-                    <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
-                    <li><a href="#id6">6</a></li>
-                    <li><a href="#id7">7</a></li>
-                    <li><a href="#id8">8</a></li>
-                    <li><a href="#id9">9</a></li>
-                    <li><a href="#id10">10</a></li>
+                    <li><a href="#id1">Main Characteristics of REST APIs</a></li>
+                    <li><a href="#id2">Advantages of REST APIs</a></li>
+                    <li><a href="#id3">Example of a REST API</a></li>
+                    <li><a href="#id4">Conclusion</a></li>
+                    <li><a href="#id5">Bibliography and Webography</a></li>
                 </ul>
             </section>
 
-            <section id="intro" class="content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-            
-            <section id="id1" class="content">
-                <h3>1111111111111</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+			<section id="intro" class="content">
+				<p>
+					A <strong>REST API</strong> (Representational State Transfer Application Programming Interface) is an architectural style for designing web services that allows communication between clients and servers using protocols like HTTP. REST APIs are widely used due to their simplicity, scalability, and compatibility with web technologies.
+				</p>
+				<div class="medium-image-container">
+					<img src="restapimodel.png"
+					alt="REST API model">
+				</div>
+			</section>
 
-            <section id="id2" class="content">
-                <h3>2</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac 
-                </p>
-            </section>
+			<section id="id1" class="content">
+				<h3>Main Characteristics of REST APIs</h3>
+				<ul>
+					<li><strong>Resources:</strong> In a REST API, everything is considered a resource, identified by a unique URL.</li>
+					<li><strong>HTTP Methods:</strong> REST APIs utilize HTTP methods to perform operations on resources, including GET, POST, PUT and DELETE.</li>
+					<li><strong>Stateless:</strong> Each request from client to server must contain all the information needed to understand and process the request.</li>
+					<li><strong>Resource Representations:</strong> Resources can be represented in various formats, commonly JSON.</li>
+					<li><strong>HATEOAS:</strong> Responses from the server can include links to other available resources for easier navigation.</li>
+					<li><strong>Status Codes:</strong> REST APIs use HTTP status codes to indicate the outcome of requests.</li>
+				</ul>
+			</section>
 
-            <section id="id3" class="content">
-                <h3>3</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+			<section id="id2" class="content">
+				<h3>Advantages of REST APIs</h3>
+				<ul>
+					<li><strong>Simplicity:</strong> Their structure is easy to understand and use.</li>
+					<li><strong>Scalability:</strong> REST APIs can handle a large number of simultaneous requests.</li>
+					<li><strong>Client-Server Independence:</strong> Clients and servers can be developed independently as long as they adhere to the API contract.</li>
+					<li><strong>Web Compatibility:</strong> Being based on standard web protocols makes them easily accessible by various clients.</li>
+				</ul>
+			</section>
 
-            <section id="id4" class="content">
-                <h3>4</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+			<section id="id3" class="content">
+				<h3>Example of a REST API</h3>
 
-            <section id="id5" class="content">
-                <h3>5</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+				<div class="small-image-container-text">
+					<p>
+						Imagine a REST API for a bookstore:
+					</p>
+					<ul>
+						<li><strong>GET</strong> <br><em>/books</em><br>Retrieves a list of books.</li><br>
+						<li><strong>GET</strong> <br><em>/books/1</em><br>Retrieves a specific book with ID 1.</li><br>
+						<li><strong>POST</strong> <br><em>/books</em><br>Creates a new book by sending data in JSON format.</li><br>
+						<li><strong>PUT</strong> <br><em>/books/1</em><br>Updates the book with ID 1 by sending updated data.</li><br>
+						<li><strong>DELETE</strong> <br><em>/books/1</em><br>Deletes the book with ID 1.</li><br>
+					</ul>
+				</div>
 
-            <section id="id6" class="content">
-                <h3>6</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+				<div class="small-image-container">
+					<img src="booksapi-small.png"
+					alt="Instal·lació de canaleta amb cables elèctrics i Ethernet clavat a una fusta">
+				</div>
 
-            <section id="id7" class="content">
-                <h3>7</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+			</section>
 
-            <section id="id8" class="content">
-                <h3>8</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+			<section id="id4" class="content">
+				<h3>Conclusion</h3>
+				<p>
+					REST APIs are a fundamental part of modern web development and are used in a wide variety of applications, from backend services to mobile apps.
+				</p>
+			</section>
 
-            <section id="id9" class="content">
-                <h3>9</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-            </section>
+			<section id="id5" class="content">
+				<h3>Bibliography and Webography</h3>
+				<p>«SKIPLEVEL». <a href="https://www.skiplevel.co/blog/part-2-rest-api-components-how-to-read-them">skiplevel.co</a></p>
+			</section>
 
-            <section id="id10" class="content">
-                <h3>10</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-
-            </section>
--->
         </article>
 
         <footer></footer>
