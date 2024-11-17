@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Xavier Baubes">
+    <meta name="description" content="Lloc web on trobaràs material de docència informàtica actualitzat i en català">
+    <meta name="keywords" content="SMX, DAM, DAW, ASIX, FP, cicle formatiu, informatica, CSS, HTML, Javascript, FTP, git, xarxes, sistemes, bases de dades, aplicacions, web, desenvolupament, programacio">
+    <title>Docència informàtica</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/icons/frontend-web-logo.ico">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/module.css">
+    <link rel="stylesheet" href="../../../assets/css/pages.css">
+    <script src="../../../data/module.js" type="text/javascript"></script>
+    <script src="../../../data/strings.js" type="text/javascript"></script>
+    <script src="../../../assets/js/components.js" type="text/javascript" defer></script>
+    <script src="../../../assets/js/componentsContent.js" type="text/javascript" defer></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLW0ETK1PT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WLW0ETK1PT');
+</script>
+<body>
+
+    <nav class="icon-container icon-container-module-content"></nav>
+
+    <main>
+
+        <article>
+
+            <h1 class="titleBar">
+                <div id="txtBar"></div>
+                <div class="dropdown">
+                    <img id="imgBar" src="../../../assets/icons/chevron-down-color.svg" alt="Desplegable" class="chevron-icon">
+                    <div id="mainNav" class="dropdown-content"></div>
+                </div>
+            </h1>
+
+            <section class="menu">
+                <ul>
+                    <li><a href="#id2">Tunneling</a></li>
+                    <li><a href="#id3">Tipus de connexió VPN</a></li>
+                    <li><a href="#id4">Tecnologies de Xifratge Utilitzades en les VPN</a></li>
+                    <li><a href="#id5">Protocols i Gestió de Clau</a></li>
+                    <li><a href="#id6">Entorn de configuració</a></li>
+                    <li><a href="#id7">Avantatges de l'ús de VPN</a></li>
+                    <li><a href="#id8">Inconvenients de l'ús de VPN</a></li>
+					<li><a href="#id9">Bibliografia i Webgrafia</a></li>
+                </ul>
+            </section>
+
+            <section id="intro" class="content">
+				<p>
+					Una VPN (<strong>Virtual Private Network</strong> o <strong>Xarxa privada virtual</strong>) és una xarxa privada que s'estén a diferents punts remots utilitzant infraestructures públiques de transport i a través d'un túnel virtual que xifra les dades per evitar que tercers puguin interceptar la informació. Normalment, es fa servir Internet, però no és l'únic mitjà.
+				</p>
+			</section>
+
+			<section id="id2" class="content">
+				<h3>Tunneling</h3>
+				<p>
+					És un procés utilitzat en les VPN per encapsular el trànsit de dades dins d’un túnel xifrat, protegint així la informació que circula per la xarxa pública, com Internet.
+				</p>
+				
+				<div class="medium-image-container">
+					<img src="ipsec-modes-transport-tunnel.gif"
+					alt="IPSec Tunneling">
+				</div>
+				
+			</section>
+
+			<section id="id3" class="content">
+				<h3>Tipus de connexió VPN</h3>
+				<p>
+					Hi ha diversos tipus de VPN, cadascun amb característiques específiques i aplicacions diferents:
+				</p>
+				<ul>
+					<li><strong>VPNs d'Accés Remot:</strong> Permet que usuaris distants es connectin a una xarxa privada de manera segura a través d'Internet. Són habituals en entorns empresarials, ja que permeten als treballadors accedir als recursos de la xarxa corporativa des de qualsevol ubicació.</li>
+					<li><strong>VPNs Site-to-Site:</strong> Connecta dues o més xarxes internes de manera segura a través d'Internet, utilitzat principalment per enllaçar oficines o sucursals d'empreses. Els protocols utilitzats poden incloure IPSec.</li>
+					<li><strong>VPNs de Nivell de Xarxa:</strong> Operen en el nivell de la capa de xarxa (l'IP), proporcionant connexions segures entre xarxes situades en diferents ubicacions físiques i gestionant el trànsit i prioritats.</li>
+				</ul>
+			</section>
+
+			<section id="id4" class="content">
+				<h3>Tecnologies de Xifratge Utilitzades en les VPN</h3>
+				<p>
+					Una de les funcions principals d'una VPN és la xifratge de les dades, que les fa incomprensibles per a qualsevol que intenti interceptar-les. Algunes de les tècniques de xifratge més comunes utilitzades en les VPN són:
+				</p>
+				<ul>
+					<li><strong>AES (Advanced Encryption Standard):</strong> Algoritme de xifratge simètric utilitzat àmpliament en les VPN modernes per la seva seguretat i eficiència. Les claus de xifratge poden tenir longituds de 128, 192 o 256 bits, amb l'AES-256 considerat el més segur.</li>
+					<li><strong>3DES (Triple DES):</strong> Versió millorada de l'antic DES (Data Encryption Standard), aplicant tres passades de xifratge per a major seguretat. Tot i això, ja és considerat obsolet en comparació amb AES.</li>
+				</ul>
+			</section>
+
+			<section id="id5" class="content">
+				<h3>Protocols i Gestió de Clau</h3>
+				<p>
+					Per garantir la seguretat en les connexions VPN, es fan servir protocols i mètodes de gestió de claus:
+				</p>
+				<ul>
+					<li><strong>ISAKMP (Internet Security Association and Key Management Protocol):</strong> Protocol utilitzat per establir, gestionar i mantenir les associacions de seguretat i les claus de xifratge en una connexió VPN, normalment en conjunt amb altres protocols com IKE.</li>
+					<li><strong>Pre-Shared Key (PSK):</strong> Clau secreta compartida entre dispositius abans de la connexió per autenticar la connexió VPN de manera més senzilla, però menys segura que altres mètodes com certificats digitals.</li>
+					<li><strong>Xifratge Asimètric:</strong> Utilitza un parell de claus, una pública que es pot compartir lliurement i una privada que es manté secreta per ser usada per intercanviar claus de xifratge de manera segura.</li>
+				</ul>
+			</section>
+
+			<section id="id6" class="content">
+				<h3>Entorn de configuració</h3>
+				<p>
+					<strong>Maquinari:</strong> Equipaments dedicats com routers. Són segurs i fàcils d'usar.
+					<ul>
+						<li><strong>Avantatges:</strong> Gran rendiment, ja que són dispositius dedicats.</li>
+						<li><strong>Inconvenients:</strong> Cost elevat i sovint utilitzen protocols propietaris.</li>
+					</ul>
+					<strong>Programari:</strong> Configuració VPN a través de sistemes operatius o solucions dedicades com PFSense.
+					<ul>
+						<li><strong>Avantatges:</strong> Menor cost, aprofitament d'equips existents i ús de protocols estàndard i propietaris.</li>
+						<li><strong>Inconvenients:</strong> Menor rendiment per l'ús de recursos de processador per altres serveis.</li>
+					</ul>
+				</p>
+			</section>
+
+			<section id="id7" class="content">
+
+				<h3>Avantatges de l'ús de VPN</h3>
+				<div class="small-image-container-text">
+					<p>
+						<ul>
+							<li><strong>Seguretat:</strong> El xifratge protegeix el trànsit de qualsevol intent d'intercepció, essencial en comunicacions sensibles com les transaccions bancàries o treball remot.</li>
+							<li><strong>Privacitat:</strong> Encriptació i encapsulació de dades a través d'un túnel per mantenir la privacitat de la informació.</li>
+							<li><strong>Accés a xarxes remotes:</strong> Permet l'accés segur a xarxes internes d'empreses o serveis privats des de qualsevol ubicació geogràfica.</li>
+							<li><strong>Evitar la censura:</strong> Permet l'accés a contingut restringit per regió o bloquejat per governs o proveïdors de serveis d'Internet.</li>
+						</ul>
+					</p>
+				</div>
+				<div class="small-image-container">
+					<img src="vpn.png"
+					alt="Home VPN">
+				</div>
+			</section>
+
+			<section id="id8" class="content">
+				<h3>Inconvenients de l'ús de VPN</h3>
+				<p>
+					<ul>
+						<li><strong>Rendiment reduït:</strong> El xifratge i la creació de túnels disminueixen significativament la velocitat de connexió.</li>
+						<li><strong>Complexitat de configuració:</strong> Algunes VPN requereixen configuracions avançades i manteniment constant.</li>
+						<li><strong>Seguretat compromesa:</strong> Tot i que amaga l'adreça IP, altres dades com les metadades de connexió poden seguir sent accessibles. Si no es configura correctament, pot ser vulnerable a atacs.</li>
+					</ul>
+				</p>
+			</section>
+			
+            <section id="id9" class="content">
+                <h3>Bibliografia i Webgrafia</h3>
+                <p>«Firewall.cx». <a href="https://www.firewall.cx/networking/network-protocols/ipsec-modes.html">www.firewall.cx/networking/network-protocols/ipsec-modes.html</a></p>
+            </section>
+
+        </article>
+
+        <footer></footer>
+
+    </main>
+
+    <div class="scroll-to-top"></div>
+
+</body>
+</html>
