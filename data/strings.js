@@ -10,7 +10,6 @@ const dades = {
     },
     "templates": {
         "t1": ["Template","content/templateModuleContent.html"],
-        "t2": ["Testing 1","content/templateModuleContentTesting.html"],
-        "t3": ["Testing 2","content/templateModuleContentTesting.html"]
+        "t2": ["Testing 1","content/templateModuleContentTesting.html"]
     }
 };

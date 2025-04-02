@@ -78,9 +78,18 @@ window.addEventListener('scroll', function() {
 //obtenim el valor del parametre page de la URL
 const params = new URLSearchParams(window.location.search);
 const indexTxt = decodeURIComponent(params.get("page"));
-
+//obtenim titol de la pagina del head
+function obtTitol() {
+    const metaTitle = document.querySelector('meta[name="title"]');
+    if(metaTitle != null) return metaTitle.getAttribute('content');
+    else return null;
+}
 //l usem com a titol de la pagina
-document.getElementById("txtBar").textContent = indexTxt;
+let titolPagina = obtTitol();
+if(titolPagina)
+    document.getElementById("txtBar").textContent = titolPagina;
+else
+    document.getElementById("txtBar").textContent = indexTxt;
 
 let showTitlePageDiv = false;
 window.addEventListener('scroll', function() {
