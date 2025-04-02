@@ -88,7 +88,7 @@ function obtTitol() {
 let titolPagina = obtTitol();
 if(titolPagina)
     document.getElementById("txtBar").textContent = titolPagina;
-else
+else if (indexTxt && indexTxt !== "null")
     document.getElementById("txtBar").textContent = indexTxt;
 
 let showTitlePageDiv = false;
