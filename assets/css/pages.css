@@ -21,11 +21,15 @@ article {
 article section.content {
     text-align: left;
     scroll-margin-top: 55px; /* desplacament per evitar sticky nav */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+article section.content:not(#intro) {
+    border-top: 1px solid var(--color-separator);
 }
 article section.content h3 {
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px solid var(--color-separator);
+    padding-top: 20px;
+    margin-top: 20px;
 }
 article section.content code:not(pre code) {
     background-color: var(--soft-dark);
