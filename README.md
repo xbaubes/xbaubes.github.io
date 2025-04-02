@@ -1,4 +1,4 @@
-### Presentació del projecte
+## Presentació del projecte
 
 Benvingut al repositori del meu portal de docència informàtica,
 una plataforma dissenyada per oferir recursos educatius de qualitat i fomentar la col·laboració entre estudiants i professors en l'àmbit de la informàtica.
@@ -12,7 +12,7 @@ Malgrat la seva simplicitat és fàcilment escalable i mantenible.
 
 ---
 
-### Tutorial per afegir mòduls i contingut
+## Tutorial per afegir mòduls i contingut
 
 **Crear nou mòdul:** Afegir-lo a *data/module.js* i crear carpeta a *modules*.
 
@@ -55,6 +55,12 @@ Exemple: Creem contingut *C* dins la carpeta del mòdul *M*, el nom del contingu
 		    },
 		    // Altres continguts aquí
 		}; </pre>
+	</ul>
+	<ul>
+		Editem la pàgina inicial "C.html" per afegir novament el nom del contingut (CTest). No és necessari, però es recomana per robustesa.
+		Editem les metadades de la capçalera <code>&lt;head&gt;</code>: <br>
+		<pre>
+		&lt;meta name="title" content="CTest"&gt; </pre>	
 	</ul>
 </ol>
 
