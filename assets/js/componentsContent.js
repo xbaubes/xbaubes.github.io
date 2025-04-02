@@ -188,7 +188,7 @@ function navModule(url,ddi,param)
     for (const clau in dadesFromTxt) {
         if (dadesFromTxt.hasOwnProperty(clau)) {
             const valor = dadesFromTxt[clau];
-			if(indexTxt != valor[0])
+			if(indexTxt != valor[0] && titolPagina != valor[0])
 			{
 				var link = document.createElement('a');
 				link.href = "../" + valor[1] + '?page=' + encodeURIComponent(valor[0]);
