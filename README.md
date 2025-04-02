@@ -57,7 +57,7 @@ Exemple: Creem contingut *C* dins la carpeta del mòdul *M*, el nom del contingu
 		}; </pre>
 	</ul>
 	<ul>
-		Editem la pàgina inicial "C.html" per afegir novament el nom del contingut (CTest). No és necessari, però es recomana per robustesa i indexació SEO.
+		Editem la pàgina inicial "C.html" per afegir novament el nom del contingut (<em>CTest</em>). No és necessari, però es recomana per robustesa i indexació SEO. És imprescindible que es mantingui el nom del contingut utilitzat anteriorment.
 		Editem les metadades de la capçalera <code>&lt;head&gt;</code>: <br>
 		<pre>
 		&lt;meta name="title" content="CTest"&gt; </pre>	
