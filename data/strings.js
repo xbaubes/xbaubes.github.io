@@ -4,8 +4,8 @@ const dades = {
         "xampp": ["XAMPP","xampp/xampp.html"]
     },
     "xarxesinfo": {
-        "canaleta": ["Instal·lació d'una Canaleta","canaleta/canaleta.html"],
 		"firewall": ["Firewall","firewall/firewall.html"],
+        "canaleta": ["Instal·lació d'una Canaleta","canaleta/canaleta.html"],
 		"vpn": ["VPN","vpn/vpn.html"]
     },
     "templates": {
