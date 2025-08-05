@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Informació Pokémon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    img {
+      max-width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Informació de Pokémon</h1>
+  <table id="pokemonTable">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Tipus</th>
+        <th>Alçada</th>
+        <th>Pes</th>
+        <th>Habilitats</th>
+        <th>Imatge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Les dades s'ompliran amb JavaScript -->
+    </tbody>
+  </table>
+
+  <script>
+    const pokemonList = ["bulbasaur", "charmander", "squirtle", "snorlax", "pikachu", "mewtwo"];
+
+    async function getPokemonData(name) {
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+      const data = await res.json();
+      const tipus = data.types.map(t => t.type.name).join(", ");
+      const habilitats = data.abilities.map(a => a.ability.name).join(", ");
+      return `
+        <tr>
+          <td>${data.name}</td>
+          <td>${tipus}</td>
+          <td>${data.height}</td>
+          <td>${data.weight}</td>
+          <td>${habilitats}</td>
+          <td><img src="${data.sprites.front_default}" alt="${data.name}"></td>
+        </tr>
+      `;
+    }
+
+    async function loadTable() {
+      const tbody = document.querySelector("#pokemonTable tbody");
+      let rows = "";
+      for (let name of pokemonList) {
+        rows += await getPokemonData(name);
+      }
+      tbody.innerHTML = rows;
+    }
+
+    loadTable();
+  </script>
+</body>
+</html>
