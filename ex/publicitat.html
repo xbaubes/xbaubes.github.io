@@ -2,10 +2,36 @@
 <html lang="ca">
 <head>
   <meta charset="utf-8">
-  <title>Test POST GAS</title>
+  <title>Formulari Web → Apps Script</title>
 </head>
 <body>
-  <button id="btn">Enviar prova</button>
+  <h2>Enviar dades a Google Apps Script</h2>
+  
+  <label>
+    Nom:
+    <input type="text" id="nom" required>
+  </label>
+  <br><br>
+  
+  <label>
+    Correu:
+    <input type="email" id="correu" required>
+  </label>
+  <br><br>
+  
+  <label>
+    Categoria:
+    <select id="categoria" required>
+      <option value="">-- Selecciona --</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>
+  </label>
+  <br><br>
+  
+  <button id="btn">Enviar</button>
+  
   <pre id="out"></pre>
 
   <script>
@@ -15,10 +41,22 @@
     document.getElementById("btn").addEventListener("click", enviar);
 
     async function enviar() {
+      // 📌 Agafar valors dels inputs
+      const nom = document.getElementById("nom").value.trim();
+      const correu = document.getElementById("correu").value.trim();
+      const categoria = document.getElementById("categoria").value;
+
+      // Validació bàsica
+      if (!nom || !correu || !categoria) {
+        alert("Omple tots els camps abans d'enviar.");
+        return;
+      }
+
+      // Construir dades en format x-www-form-urlencoded
       const params = new URLSearchParams();
-      params.append("nom", "XB");
-      params.append("correu", "xbaubes@xtec.cat");
-      params.append("categoria", "A");
+      params.append("nom", nom);
+      params.append("correu", correu);
+      params.append("categoria", categoria);
 
       try {
         const res = await fetch(ENDPOINT, {
@@ -27,12 +65,12 @@
           body: params.toString()
         });
 
-        const text = await res.text();   // llegeix primer com text
+        const text = await res.text();
         let data;
-        try { data = JSON.parse(text); } // intenta parsejar JSON
-        catch { data = { raw:text }; }   // si no és JSON, mostra cru
+        try { data = JSON.parse(text); }
+        catch { data = { raw: text }; }
 
-        out.textContent = JSON.stringify({status: res.status, data}, null, 2);
+        out.textContent = JSON.stringify({ status: res.status, data }, null, 2);
       } catch (err) {
         out.textContent = "Error de xarxa: " + err.message;
       }
