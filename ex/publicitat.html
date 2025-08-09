@@ -1,25 +1,42 @@
-<script>
-async function enviar() {
-  const params = new URLSearchParams();
-  params.append("nom", "XB");
-  params.append("correu", "xbaubes@xtec.cat");
-  params.append("categoria", "A");
-  // params.append("token", "EL_TEU_SECRET"); // opcional TO DO
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Test POST GAS</title>
+</head>
+<body>
+  <button id="btn">Enviar prova</button>
+  <pre id="out"></pre>
 
-  const res = await fetch("https://script.google.com/macros/s/AKfycbyi0w2ApCouWmQOsSe1b45V89DMyXhFKd36wcO1QzhLlfgAJ4zzVqpuw7FDyCKDj3NLdg/exec", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: params.toString()
-  });
-  const data = await res.json();
-  console.log(data);
-}
+  <script>
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbyi0w2ApCouWmQOsSe1b45V89DMyXhFKd36wcO1QzhLlfgAJ4zzVqpuw7FDyCKDj3NLdg/exec";
+    const out = document.getElementById("out");
 
-/*
-fetch("https://script.google.com/macros/s/AKfycbyi0w2ApCouWmQOsSe1b45V89DMyXhFKd36wcO1QzhLlfgAJ4zzVqpuw7FDyCKDj3NLdg/exec", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ nom:"XB", correu:"xbaubes@xtec.cat", categoria:"A" })
-});
-*/
-</script>
+    document.getElementById("btn").addEventListener("click", enviar);
+
+    async function enviar() {
+      const params = new URLSearchParams();
+      params.append("nom", "XB");
+      params.append("correu", "xbaubes@xtec.cat");
+      params.append("categoria", "A");
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: params.toString()
+        });
+
+        const text = await res.text();   // llegeix primer com text
+        let data;
+        try { data = JSON.parse(text); } // intenta parsejar JSON
+        catch { data = { raw:text }; }   // si no és JSON, mostra cru
+
+        out.textContent = JSON.stringify({status: res.status, data}, null, 2);
+      } catch (err) {
+        out.textContent = "Error de xarxa: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
