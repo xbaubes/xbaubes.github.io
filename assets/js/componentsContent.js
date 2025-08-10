@@ -118,7 +118,11 @@ window.addEventListener('scroll', function() {
 	}
 	if (window.scrollY >= 100 && !showTitlePageDiv) {
 		if (titlePageDiv !== undefined) {
-			titlePageDiv.innerText = indexTxt;
+
+			if(titolPagina)
+				titlePageDiv.innerText = titolPagina;
+			else if (indexTxt && indexTxt !== "null")
+				titlePageDiv.innerText = indexTxt;
 
 			var dropdownDiv = document.createElement('div');
 			dropdownDiv.className = 'dropdown';

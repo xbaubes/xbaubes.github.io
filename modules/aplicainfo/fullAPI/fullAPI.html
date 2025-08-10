@@ -46,117 +46,168 @@
 
             <section class="menu">
                 <ul>
-                    <!--<li><a href="#intro">Introducció</a></li>-->
-                    <li><a href="#id1">1</a></li>
-                    <li><a href="#id2">2</a></li>
-                    <li><a href="#id3">3</a></li>
+                    <li><a href="#intro">Introducció</a></li>
+                    <li><a href="#id1">Utilitat</a></li>
+                    <li><a href="#id2">Funcionament</a></li>
+                    <li><a href="#id3">Exemple d'ús</a></li>
                     <li><a href="#id4">4</a></li>
                     <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
                         et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
-                    <li><a href="#id6">6</a></li>
-                    <li><a href="#id7">7</a></li>
-                    <li><a href="#id8">8</a></li>
-                    <li><a href="#id9">9</a></li>
-                    <li><a href="#id10">10</a></li>
                 </ul>
             </section>
 
             <section id="intro" class="content">
                 <p>
-                    <div id="fullAPI">
-                        <h1>Cercador d'elements químics</h1>
+                    Eines com <strong>SheetDB</strong> són útils perquè converteixen un full de càlcul
+                    en una <strong>API REST</strong>, és a dir, en un servei web amb el qual pots comunicar-te per
+                    <em>llegir</em>, <em>afegir</em>, <em>editar</em> o <em>eliminar</em> dades utilitzant crides HTTP
+                    (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).
+                </p>
 
-                        <form id="searchForm">
-                            <label for="numAtomic">Número atòmic:</label>
-                            <input type="number" id="numAtomic" name="Número atòmic">
+                <p>En lloc d’haver de:</p>
+                <ul>
+                    <li>Configurar un servidor propi,</li>
+                    <li>Escriure codi backend,</li>
+                    <li>O gestionar una base de dades tradicional,</li>
+                </ul>
 
-                            <label for="element">Element:</label>
-                            <input type="text" id="element" name="Element">
-
-                            <label for="simbol">Símbol:</label>
-                            <input type="text" id="simbol" name="Símbol">
-
-                            <label for="grup">Grup:</label>
-                            <input type="text" id="grup" name="Grup">
-
-                            <label for="estat">Estat a temperatura ambient:</label>
-                            <select id="estat" name="Estat a temperatura ambient">
-                                <option value="">-- Qualsevol --</option>
-                                <option value="Sòlid">Sòlid</option>
-                                <option value="Líquid">Líquid</option>
-                                <option value="Gas">Gas</option>
-                            </select>
-
-                            <label for="aplicacions">Aplicacions:</label>
-                            <input type="text" id="aplicacions" name="Aplicacions">
-
-                            <button type="submit">Cercar</button>
-                        </form>
-
-                        <div id="results"></div>
-
-                    </div>
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
+                <p>
+                    ...pots aprofitar <strong>Google Sheets</strong> com a <strong>magatzem de dades</strong> i fer-lo accessible de manera estructurada i estàndard.
                 </p>
             </section>
             
             <section id="id1" class="content">
-                <h3>1111111111111</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <h3>Utilitat</h3>
+
+                <p><strong>Simplicitat</strong></p>
+                <ul>
+                    <li>No cal saber backend ni SQL per tenir un sistema de dades compartit.</li>
+                    <li>L'usuari pot modificar la les dades directament al full.</li>
+                </ul>
+
+                <p><strong>Integració fàcil</strong></p>
+                <ul>
+                    <li>Qualsevol aplicació web, app mòbil o script pot consumir o enviar dades a través de l’API.</li>
+                    <li>Funciona amb JavaScript al navegador, Python, PHP, etc.</li>
+                </ul>
+
+                <p><strong>Col·laboració</strong></p>
+                <ul>
+                    <li>El full es pot editar per múltiples persones alhora i les actualitzacions són immediates a l’API.</li>
+                </ul>
+
+                <p><strong>Versatilitat</strong></p>
+                <ul>
+                    <li>Serveix tant per projectes petits (formularis, mapes, llistats) com per prototips d’aplicacions més grans.</li>
+                </ul>
             </section>
 
             <section id="id2" class="content">
-                <h3>2</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac 
-                </p>
+                <h3>Funcionament</h3>
+                <ol>
+                    <li>Crees el full de càlcul amb les columnes (capçaleres) que seran els camps de dades.</li>
+                    <li>El connectes a SheetDB i obtens una URL d’API.</li>
+                    <li>
+                    Pots fer:
+                    <ul>
+                        <li><code>GET</code>: obtenir dades (<code>https://sheetdb.io/api/v1/ID</code> o <code>/search?...</code>)</li>
+                        <li><code>POST</code>: afegir noves files</li>
+                        <li><code>PUT/PATCH</code>: modificar files existents</li>
+                        <li><code>DELETE</code>: esborrar files</li>
+                    </ul>
+                    </li>
+                    <li>Tot queda sincronitzat amb el full en temps real.</li>
+                </ol>
+				
+				<div class="medium-image-container">
+					<img src="sheetDB-schema.png"
+					alt="Funcionament SheetDB">
+				</div>
+				
             </section>
 
             <section id="id3" class="content">
-                <h3>3</h3>
+                <h3>Exemple d'ús: Cercador d'elements químics</h3>
+
+                <p>A través d'aquest formulari HTML podem cercar i visualitzar elements químics.</p>
+                <p>El formulari obté la informació a través d'un full de càlcul connectat a <strong>SheetDB</strong> (Google Sheets convertit en API REST).</p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
+                    Pots veure el Google Sheets d'on s'obtenen les dades clickant
+                    <a href="https://docs.google.com/spreadsheets/d/1izf8-enZhMFNLQ7UC1Mp3R2ltVBT0gCZ4ItjDtiFVJs/edit?usp=sharing" target="_blank">
+                        aquí
+                    </a>
                 </p>
+                <p>
+                    I pots veure les dades en format JSON que retorna el servei API REST clickant
+                    <a href="https://sheetdb.io/api/v1/q4eo36ocdijgf" target="_blank">
+                        aquí
+                    </a>
+                </p>
+
+                <ul>
+                    <li>L'usuari introdueix valors als camps del formulari:
+                        <ul>
+                            <li>Número atòmic</li>
+                            <li>Nom</li>
+                            <li>Símbol químic</li>
+                            <li>Estat a temperatura ambient</li>
+                        </ul>
+                    </li>
+                    <li>Quan es prem el botó <em>Cercar</em> s'envien les dades sense recarregar la pàgina:
+                        <ul>
+                            <li>Es llegeixen només els camps que tenen valor i es codifiquen per a URL.</li>
+                            <li>Es construeix la URL de consulta a l'API de SheetDB, afegint paràmetres <code>/search?camp=valor</code>.</li>
+                        </ul>
+                    </li>
+                    <li>El codi fa una petició HTTP GET a la URL construïda:
+                        <ul>
+                            <li>Si la resposta és correcta, la converteix a JSON.</li>
+                            <li>Crea dinàmicament una taula HTML amb:
+                            <ul>
+                                <li>Capçalera amb els noms de les columnes.</li>
+                                <li>Files amb els valors corresponents.</li>
+                            </ul>
+                            </li>
+                            <li>Insereix aquesta taula dins del contingut de la pàgina web.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+
+                <div id="exempleFullAPI">
+                    <form id="searchForm">
+                        <label for="numAtomic">Número atòmic:</label>
+                        <input type="number" id="numAtomic" name="Número atòmic">
+
+                        <label for="element">Nom:</label>
+                        <input type="text" id="element" name="Element">
+
+                        <label for="simbol">Símbol químic:</label>
+                        <input type="text" id="simbol" name="Símbol">
+
+                        <label for="estat">Estat a temperatura ambient:</label>
+                        <select id="estat" name="Estat a temperatura ambient">
+                            <option value="">-- Qualsevol --</option>
+                            <option value="Sòlid">Sòlid</option>
+                            <option value="Líquid">Líquid</option>
+                            <option value="Gas">Gas</option>
+                        </select>
+
+                        <button type="submit">Cercar</button>
+                    </form>
+
+                    <div id="results"></div>
+                </div>
             </section>
 
             <section id="id4" class="content">
                 <h3>4</h3>
                 <p>
+                    posar abans que exemple
+                    EXPLICAR CONCEPTES JS PER TREBALLAR AMB DADES !!! GET POST DELETE PUT
+                    posar codi js per modificar el DOM???
+
+
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
                     ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
@@ -180,88 +231,6 @@
                     amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
                     vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
                 </p>
-            </section>
-
-            <section id="id6" class="content">
-                <h3>6</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id7" class="content">
-                <h3>7</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id8" class="content">
-                <h3>8</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id9" class="content">
-                <h3>9</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-            </section>
-
-            <section id="id10" class="content">
-                <h3>10</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-
             </section>
 
         </article>
