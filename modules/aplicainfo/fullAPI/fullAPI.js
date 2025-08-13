@@ -55,8 +55,6 @@ function mostrarResultats(dades) {
 		let primeraFila = dades[0];
 		for (let nomColumna in primeraFila) {
 			html += "<th>" + nomColumna + "</th>";
-			console.log(nomColumna)
-			// console.log(primeraFila[nomColumna])
 		}
 		html += "</tr></thead>";
 
@@ -68,7 +66,7 @@ function mostrarResultats(dades) {
 			console.log(fila)
 			for (let caracteristica in fila) {
 				html += "<td>" + fila[caracteristica] + "</td>";
-				console.log(fila[caracteristica])
+				console.log(caracteristica + " : " + fila[caracteristica])
 			}
 			html += "</tr>";
 		}
