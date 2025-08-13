@@ -1,52 +1,80 @@
 const API_BASE = "https://sheetdb.io/api/v1/q4eo36ocdijgf";
 
-document.getElementById("searchForm").addEventListener("submit", async function(e) //es crida quan s envia el formulari
-{
-    e.preventDefault();
+// s executa quan s envia el formulari
+document.getElementById("searchForm").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Evita que es recarregui la pagina si utilitzem boto type="submit"
 
-    // Recollir camps omplerts
-    const params = [];
-    const formData = new FormData(this);
-    for (const [key, value] of formData.entries()) {
-        if (value.trim() !== "")
-            params.push(`${encodeURIComponent(key)}=${encodeURIComponent(value.trim())}`);
+    // Preparar els paràmetres de cerca
+    let params = "";
+    let inputs = this.elements; // array amb tots els camps del formulari
+
+    for (let i = 0; i < inputs.length; i++) {
+        let nomCamp = inputs[i].name; // nom del camp HTML
+        let valorCamp = inputs[i].value.trim(); //eliminem els espais davant i darrera de l string introduit per l usuari
+
+        if (nomCamp && valorCamp !== "") { // afegim si te nom i valor
+            if (params !== "") {
+                params += "&"; // Afegim separador si no és el primer
+            }
+            params = params + ( encodeURIComponent(nomCamp) + "=" + encodeURIComponent(valorCamp) ); // codifica per ser usada en URL
+        }
     }
 
+    // Construir la URL final
     let url = API_BASE;
-    if (params.length > 0) {
-        url += "/search?" + params.join("&");
+    if (params !== "") {
+        url = url + "/search?" + params; // GET
     }
 
+    // Cridar l'API i mostrar resultats
     try {
-        const res = await fetch(url);
-        const data = await res.json();
-        mostrarResultats(data);
+		console.log(url);
+        let resposta = await fetch(url);
+        let dades = await resposta.json();
+        mostrarResultats(dades);
     } catch (error) {
-        document.getElementById("results").innerHTML = "<p style='color:red;'>Error carregant dades</p>";
+        document.getElementById("results").innerHTML = "<p>Error carregant dades</p>";
     }
 });
 
-function mostrarResultats(data)
-{
-    if (!data || data.length === 0) {
-        document.getElementById("results").innerHTML = "<p>No s'han trobat resultats.</p>";
-        return;
+// mostra la informacio rebuda creant una taula HTML
+function mostrarResultats(dades) {
+    let divResultats = document.getElementById("results");
+
+    // Si no hi ha dades
+    if (!dades || dades.length === 0) {
+        divResultats.innerHTML = "<p>No s'han trobat resultats.</p>";
     }
+	else {
+		console.log(dades)
+		// Començar la taula
+		let html = "<table>";
+		html += "<thead><tr>";
 
-    let html = "<table><thead><tr>";
-    Object.keys(data[0]).forEach(col => {
-        html += `<th>${col}</th>`;
-    });
-    html += "</tr></thead><tbody>";
+		// Afegir capçaleres
+		let primeraFila = dades[0];
+		for (let nomColumna in primeraFila) {
+			html += "<th>" + nomColumna + "</th>";
+			console.log(nomColumna)
+			// console.log(primeraFila[nomColumna])
+		}
+		html += "</tr></thead>";
 
-    data.forEach(row => {
-        html += "<tr>";
-        Object.values(row).forEach(val => {
-        html += `<td>${val}</td>`;
-        });
-        html += "</tr>";
-    });
+		// Afegir el cos
+		html += "<tbody>";
+		for (const fila of dades) {
+			html += "<tr>";
+			//
+			console.log(fila)
+			for (let caracteristica in fila) {
+				html += "<td>" + fila[caracteristica] + "</td>";
+				console.log(fila[caracteristica])
+			}
+			html += "</tr>";
+		}
+		html += "</tbody></table>";
 
-    html += "</tbody></table>";
-    document.getElementById("results").innerHTML = html;
+		// Mostrar-ho a la pàgina
+		divResultats.innerHTML = html;
+	}
 }

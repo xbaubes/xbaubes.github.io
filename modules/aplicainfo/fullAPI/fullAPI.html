@@ -46,33 +46,43 @@
 
             <section class="menu">
                 <ul>
-                    <li><a href="#intro">Introducció</a></li>
                     <li><a href="#id1">Utilitat</a></li>
                     <li><a href="#id2">Funcionament</a></li>
                     <li><a href="#id3">Exemple d'ús</a></li>
-                    <li><a href="#id4">4</a></li>
-                    <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
+                    <li><a href="#id4">Explicació del codi</a></li>
+                    <li><a href="#id5">Crides a l'API</a></li>
                 </ul>
             </section>
 
             <section id="intro" class="content">
+
+				<div class="small-float-image-container">
+					<img src="sheetDB-logo.png"
+					alt="Instal·lació de canaleta amb cables elèctrics i Ethernet clavat a una fusta">
+				</div>
                 <p>
                     Eines com <strong>SheetDB</strong> són útils perquè converteixen un full de càlcul
-                    en una <strong>API REST</strong>, és a dir, en un servei web amb el qual pots comunicar-te per
-                    <em>llegir</em>, <em>afegir</em>, <em>editar</em> o <em>eliminar</em> dades utilitzant crides HTTP
-                    (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).
+                    en una <strong>API RESTful</strong>
+					<br>
+					Una API RESTful és un servei web amb el qual pots comunicar-te per:
+					<br>
+                    <em>Llegir,</em>
+					<em>afegir,</em>
+					<em>editar,</em>
+					<em>i eliminar</em>
+					dades utilitzant crides HTTP
+                    (<code>GET</code>, <code>POST</code>, <code>PUT</code> i <code>DELETE</code>).
                 </p>
 
                 <p>En lloc d’haver de:</p>
                 <ul>
-                    <li>Configurar un servidor propi,</li>
-                    <li>Escriure codi backend,</li>
-                    <li>O gestionar una base de dades tradicional,</li>
+                    <li>Configurar un servidor propi</li>
+                    <li>Escriure codi backend</li>
+                    <li>Gestionar una base de dades tradicional</li>
                 </ul>
 
                 <p>
-                    ...pots aprofitar <strong>Google Sheets</strong> com a <strong>magatzem de dades</strong> i fer-lo accessible de manera estructurada i estàndard.
+                    Pots aprofitar <strong>Google Sheets</strong> com a <strong>magatzem de dades</strong> i fer-lo accessible de manera estructurada i estàndard.
                 </p>
             </section>
             
@@ -82,7 +92,7 @@
                 <p><strong>Simplicitat</strong></p>
                 <ul>
                     <li>No cal saber backend ni SQL per tenir un sistema de dades compartit.</li>
-                    <li>L'usuari pot modificar la les dades directament al full.</li>
+                    <li>L'usuari pot modificar les dades directament al full de càlcul.</li>
                 </ul>
 
                 <p><strong>Integració fàcil</strong></p>
@@ -98,19 +108,27 @@
 
                 <p><strong>Versatilitat</strong></p>
                 <ul>
-                    <li>Serveix tant per projectes petits (formularis, mapes, llistats) com per prototips d’aplicacions més grans.</li>
+                    <li>Serveix tant per projectes petits com per prototips d’aplicacions més grans.</li>
                 </ul>
             </section>
 
             <section id="id2" class="content">
                 <h3>Funcionament</h3>
                 <ol>
-                    <li>Crees el full de càlcul amb les columnes (capçaleres) que seran els camps de dades.</li>
-                    <li>El connectes a SheetDB i obtens una URL d’API.</li>
                     <li>
-                    Pots fer:
+						Crees el full de càlcul amb les columnes (capçaleres) que seran els camps de dades.
+						Pots utilitzar Google Sheets que s'emmagatzema automàticament a Google Drive.
+					</li>
+                    <li>
+						El connectes a SheetDB i obtens una URL d’API. Pots accedir a la pàgina web de SheetDB clickant
+						<a href="https://sheetdb.io/" target="_blank">
+							aquí
+						</a>
+					</li>
+                    <li>
+                    Pots activar els mètodes HTTP que t'interessin:
                     <ul>
-                        <li><code>GET</code>: obtenir dades (<code>https://sheetdb.io/api/v1/ID</code> o <code>/search?...</code>)</li>
+                        <li><code>GET</code>: obtenir dades</li>
                         <li><code>POST</code>: afegir noves files</li>
                         <li><code>PUT/PATCH</code>: modificar files existents</li>
                         <li><code>DELETE</code>: esborrar files</li>
@@ -129,7 +147,7 @@
             <section id="id3" class="content">
                 <h3>Exemple d'ús: Cercador d'elements químics</h3>
 
-                <p>A través d'aquest formulari HTML podem cercar i visualitzar elements químics.</p>
+                <p>A través d'aquest formulari HTML podem cercar i visualitzar elements químics. SheetDB permet generar un token per restringir l'accés als endpoints però com que no es pot enviar amb seguretat des d'un navegador web, aquest aplicació no n'utilitza i només permet GET.</p>
                 <p>El formulari obté la informació a través d'un full de càlcul connectat a <strong>SheetDB</strong> (Google Sheets convertit en API REST).</p>
                 <p>
                     Pots veure el Google Sheets d'on s'obtenen les dades clickant
@@ -145,7 +163,7 @@
                 </p>
 
                 <ul>
-                    <li>L'usuari introdueix valors als camps del formulari:
+                    <li>L'usuari pot introduir valors als camps del formulari per tal de filtar pels elements que li interessen:
                         <ul>
                             <li>Número atòmic</li>
                             <li>Nom</li>
@@ -162,13 +180,13 @@
                     <li>El codi fa una petició HTTP GET a la URL construïda:
                         <ul>
                             <li>Si la resposta és correcta, la converteix a JSON.</li>
-                            <li>Crea dinàmicament una taula HTML amb:
+                            <li>Crea dinàmicament una taula HTML i l'omple amb:
                             <ul>
-                                <li>Capçalera amb els noms de les columnes.</li>
-                                <li>Files amb els valors corresponents.</li>
+                                <li>Capçalera amb els noms de les columnes rebudes.</li>
+                                <li>Files amb els valors rebuts.</li>
                             </ul>
                             </li>
-                            <li>Insereix aquesta taula dins del contingut de la pàgina web.</li>
+                            <li>Finalment, insereix aquesta taula dins del contingut de la pàgina web.</li>
                         </ul>
                     </li>
                 </ul>
@@ -187,7 +205,7 @@
 
                         <label for="estat">Estat a temperatura ambient:</label>
                         <select id="estat" name="Estat a temperatura ambient">
-                            <option value="">-- Qualsevol --</option>
+                            <option value="">-- Qualsevol --</option> <!-- enviem cadena buida si es selecciona aquesta opcio -->
                             <option value="Sòlid">Sòlid</option>
                             <option value="Líquid">Líquid</option>
                             <option value="Gas">Gas</option>
@@ -201,36 +219,102 @@
             </section>
 
             <section id="id4" class="content">
-                <h3>4</h3>
-                <p>
-                    posar abans que exemple
-                    EXPLICAR CONCEPTES JS PER TREBALLAR AMB DADES !!! GET POST DELETE PUT
-                    posar codi js per modificar el DOM???
+                <h3>Explicació del codi</h3>
 
+				<div>
+				  <strong>HTML</strong>
+				  <p>Els inputs utilitzen tipus específics (<code>type="number"</code> i <code>type="text"</code>) per validar, des del navegador, el format de l'entrada.</p>
 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+				  <p>El <code>&lt;select&gt;</code> proporciona una llista d’opcions predefinides, amb una opció inicial de cadena buida per indicar que no es filtra per aquest camp.</p>
+
+				  <p>Cada control està associat a un atribut <code>name</code> que el fa identificable des de JavaScript.</p>
+
+				  <p>Es defineix un <code>&lt;div&gt;</code> a sota com a contenidor on es mostraran els resultats de la petició.</p>
+
+				  <p>El botó <code>type="submit"</code> desencadena l’esdeveniment d'enviament del formulari.</p>
+				</div>
+
+				<div>
+				  <strong>JavaScript</strong>
+				  <p>L'esdeveniment d'enviament del formulari es captura usant JavaScript amb <code>addEventListener("submit", ...)</code>.</p>
+
+				  <p>Amb la instrucció <code>e.preventDefault()</code> s'evita que el navegador recarregui la pàgina i enviï el formulari via HTTP estàndard.</p>
+
+				  <p><code>this.elements</code> és la col·lecció de tots els elements del formulari (<code>input</code> i <code>select</code> en aquest cas).</p>
+
+				  <p>Per sanejar les dades, apliquem <code>value.trim()</code> per eliminar els espais inicials i finals, i amb <code>encodeURIComponent</code> formategem l'string per enviar-lo com a URL.</p>
+
+				  <p>Si hi ha paràmetres, s’afegeix <code>/search?</code> a la query string generada, indicant que es farà una petició GET amb filtres. Els paràmetres es concatenen amb <code>&amp;</code>.</p>
+
+				  <p>Es realitza una petició asíncrona a l’API: Usant <code>fetch(url)</code> per obtenir les dades.</p>
+
+				  <p>Amb la funció asíncrona <code>.json()</code> es converteix la resposta HTTP en un objecte JavaScript.</p>
+
+				  <p>A través de la manipulació del DOM, les dades s'insereixen en format <code>&lt;table&gt;</code> al <code>&lt;div&gt;</code> definit a l'HTML. Per analitzar pas a pas aquest procés i la crida a l'API, el codi inclou <code>console.log</code>, els resultats que retorna es poden veure inspeccionant la pàgina i accedint a la pestanya "Console".</p>
+				</div>
+
             </section>
 
             <section id="id5" class="content">
-                <h3>5</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
+                <h3>Crides a l'API</h3>
+				<div>
+					<p>Un exemple dels endpoints que facilita l'aplicació per cada mètode HTTP. Informació obtinguda de la font oficial, clicka 
+						<a href="https://docs.sheetdb.io/" target="_blank">aquí</a>
+					</p>
+					<ul>
+						<li>
+							<strong>GET</strong> Obtenir totes les dades:<br>
+							<code>/</code><br>
+							<a href="https://sheetdb.io/api/v1/ID_FULL_SHEETDB" target="_blank">https://sheetdb.io/api/v1/ID_FULL_SHEETDB</a>
+						</li>
+						<li>
+							<strong>GET</strong> Cercar dades:<br>
+							<code>/search?...</code><br>
+							Cercar les dades de la usuària de nom Maria:<br>
+							<a href="https://sheetdb.io/api/v1/ID_FULL_SHEETDB/search?nom=Maria" target="_blank">
+								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/search?nom=Maria
+							</a>
+						</li>
+						<li>
+							<strong>POST</strong> Afegir fila nova:<br>
+							<code>/</code><br>
+							<a href="https://sheetdb.io/api/v1/ID_FULL_SHEETDB" target="_blank">
+								https://sheetdb.io/api/v1/ID_FULL_SHEETDB
+							</a>
+						</li>
+						<li>
+							<strong>PATCH / PUT</strong> Actualitzar dades:<br>
+							<code>/id/{valor}</code><br>
+							Actualitzar les dades de l'usuari amb id=3:<br>
+							<a href="https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3" target="_blank">
+								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3
+							</a>
+						</li>
+						<li>
+							<strong>DELETE</strong> Esborrar dades:<br>
+							<code>/id/{valor}</code><br>
+							Esborrar l'usuari amb id=3:<br>
+							<a href="https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3" target="_blank">
+								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3
+							</a>
+						</li>
+					</ul>
+					
+					<p>Exemple de crida POST a un endpoint de l'API:
+					
+					<pre><code>
+	const resposta = await fetch(API_ENDPOINT, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+			data: [{ nom: "Joan", naix: 1977 }]
+		})
+	});
+	const data = await resposta.json();
+	console.log("POST:", data);
+					</code></pre>
+					
+				</div>
             </section>
 
         </article>

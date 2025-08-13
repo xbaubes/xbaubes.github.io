@@ -96,7 +96,7 @@ article section.menu ul li a:hover {
     background-color: var(--color-title);
 }
 
-
+/* scroll */
 
 .scroll-to-top {
     position: fixed;
