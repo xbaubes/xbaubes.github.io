@@ -71,7 +71,7 @@
 					<em>editar,</em>
 					<em>i eliminar</em>
 					dades utilitzant crides HTTP
-                    (<code>GET</code>, <code>POST</code>, <code>PUT</code> i <code>DELETE</code>).
+                    (<code>GET</code>, <code>POST</code>, <code>PUT/PATCH</code> i <code>DELETE</code>).
                 </p>
 
                 <p>En lloc d’haver de:</p>
@@ -116,25 +116,31 @@
                 <h3>Funcionament</h3>
                 <ol>
                     <li>
-						Crees el full de càlcul amb les columnes (capçaleres) que seran els camps de dades.
-						Pots utilitzar Google Sheets que s'emmagatzema automàticament a Google Drive.
+						Crees el full de càlcul amb les columnes (capçaleres) a la primera fila, els registres amb les dades els posarem a partir de la segona línia.
+						<br>Pots utilitzar Google Sheets, que s'emmagatzema automàticament a Google Drive. Cal que sigui públic, almenys per lectura, per tal que SheetDB hi pugui accedir.
+						<br>Si vols utilitzar diferents taules per la teva API, pots separar-les en diferents fulls. L'explicació
+						<a href="https://docs.sheetdb.io/multiple-sheets" target="_blank">
+							aquí
+						</a>
 					</li>
                     <li>
 						El connectes a SheetDB i obtens una URL d’API. Pots accedir a la pàgina web de SheetDB clickant
 						<a href="https://sheetdb.io/" target="_blank">
 							aquí
 						</a>
+						<br>Tot queda sincronitzat amb el full en temps real.
 					</li>
                     <li>
                     Pots activar els mètodes HTTP que t'interessin:
                     <ul>
-                        <li><code>GET</code>: obtenir dades</li>
-                        <li><code>POST</code>: afegir noves files</li>
-                        <li><code>PUT/PATCH</code>: modificar files existents</li>
-                        <li><code>DELETE</code>: esborrar files</li>
+                        <li><code>GET</code>: Obtenir dades</li>
+                        <li><code>POST</code>: Afegir noves files</li>
+                        <li><code>PUT/PATCH</code>: Modificar files existents</li>
+                        <li><code>DELETE</code>: Esborrar files</li>
                     </ul>
                     </li>
-                    <li>Tot queda sincronitzat amb el full en temps real.</li>
+					Si vols que SheetDB hi pugui fer canvis al teu full de càlcul, per exemple per implementar POST, li hauràs de donar permís.
+					<li>SheetDB crea un endpoint per cada mètode HTTP. Si hi fas una crida HTTP rebràs un resposta en format JSON amb les dades sol·licitades.</li>
                 </ol>
 				
 				<div class="medium-image-container">
