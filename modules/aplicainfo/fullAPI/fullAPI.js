@@ -23,7 +23,7 @@ document.getElementById("searchForm").addEventListener("submit", async function 
     // Construir la URL final
     let url = API_BASE;
     if (params !== "") {
-        url = url + "/search?" + params; // GET
+        url = url + "/search?" + params; // GET amb filtre
     }
 
     // Cridar l'API i mostrar resultats
