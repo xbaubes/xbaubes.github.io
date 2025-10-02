@@ -9,7 +9,8 @@ const dades = {
 		"vpn": ["VPN","vpn/vpn.html"]
     },
     "aplicainfo": {
-		"fullAPI": ["Full de càlcul com a API","fullAPI/fullAPI.html"]
+		"fullAPI": ["Full de càlcul com a API","fullAPI/fullAPI.html"],
+		"mymaps": ["Google My Maps","mymaps/mymaps.html"]
     },
     "templates": {
         "t1": ["Template","content/templateModuleContent.html"],
