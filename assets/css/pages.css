@@ -246,6 +246,39 @@ article section.content table td {
 article section.content th, article section.content td { border: 1px solid var(--color-title); padding: 8px; text-align: left; }
 article section.content th { background-color: var(--color-nav); }
 
+/* video */
+
+.video-container {
+	width: 100%;
+	margin: 12px auto;
+}
+video {
+	width: 100%;
+	height: auto;
+	max-height: 600px;
+	border-radius: 12px;
+	border: 2px solid var(--menu-section);
+	/*box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
+	box-sizing: border-box;
+	display: block;
+}
+video:hover {
+	border-color: var(--color-arrowup-hover);
+}
+
+/* model 3D */
+
+.model3D {
+	margin: 12px auto;
+	border: 3px solid var(--menu-section); border-radius:12px;
+	position: relative;
+	padding-bottom: 40%;
+}
+
+model-viewer {
+	position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
 /*** big-image-container ***/
 
 article section.content .big-image-container , article section.content .medium-image-container {
