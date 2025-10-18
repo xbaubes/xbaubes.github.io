@@ -9,6 +9,7 @@ const dades = {
 		"vpn": ["VPN","vpn/vpn.html"]
     },
     "aplicainfo": {
+		"disseny3D": ["Disseny, modelatge i impressió 3D","disseny3D/disseny3D.html"],
 		"fullAPI": ["Full de càlcul com a API","fullAPI/fullAPI.html"],
 		"mymaps": ["Google My Maps","mymaps/mymaps.html"]
     },

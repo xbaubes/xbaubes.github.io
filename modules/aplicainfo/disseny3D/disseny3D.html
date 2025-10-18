@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Xavier Baubes">
+    <meta name="description" content="Lloc web on trobaràs material de docència informàtica actualitzat i en català">
+    <meta name="keywords" content="SMX, DAM, DAW, ASIX, FP, cicle formatiu, informatica, CSS, HTML, Javascript, FTP, git, xarxes, sistemes, bases de dades, aplicacions, web, desenvolupament, programacio">
+    <!-- <meta name="title" content="Template"> -->
+    <title>Docència informàtica</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/icons/frontend-web-logo.ico">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/module.css">
+    <link rel="stylesheet" href="../../../assets/css/pages.css">
+    <script src="../../../data/module.js" type="text/javascript"></script>
+    <script src="../../../data/strings.js" type="text/javascript"></script>
+    <script src="../../../assets/js/components.js" type="text/javascript" defer></script>
+    <script src="../../../assets/js/componentsContent.js" type="text/javascript" defer></script>
+	<script type="module" src="../../../assets/js/model-viewer.min.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLW0ETK1PT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WLW0ETK1PT');
+</script>
+<body>
+
+    <nav class="icon-container icon-container-module-content"></nav>
+
+    <main>
+
+        <article>
+
+            <h1 class="titleBar">
+                <div id="txtBar"></div>
+                <div class="dropdown">
+                    <img id="imgBar" src="../../../assets/icons/chevron-down-color.svg" alt="Desplegable" class="chevron-icon">
+                    <div id="mainNav" class="dropdown-content"></div>
+                </div>
+            </h1>
+
+            <section class="menu">
+                <ul>
+                    <!--<li><a href="#intro">Introducció</a></li>-->
+                    <li><a href="#id1">Tinkercad</a></li>
+                    <li><a href="#id2">2</a></li>
+                    <li><a href="#id3">3</a></li>
+                    <li><a href="#id4">4</a></li>
+                    <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
+                    <li><a href="#id6">6</a></li>
+                    <li><a href="#id7">7</a></li>
+                    <li><a href="#id8">8</a></li>
+                    <li><a href="#id9">9</a></li>
+                    <li><a href="#id10">10</a></li>
+                </ul>
+            </section>
+
+            <section id="intro" class="content">
+				<p>
+					El <strong>disseny 3D</strong> és el procés creatiu d’imaginar i definir la forma, funció i estètica d’un objecte. 
+					Inclou decisions sobre proporcions, estil, ergonomia i funcionalitat, assegurant que l’objecte compleixi els requisits previs.
+				</p>
+				<p>
+					El <strong>modelatge 3D</strong> consisteix a construir aquest objecte digitalment dins d’un programari especialitzat com Tinkercad, Blender o Fusion360. 
+					Aquí es materialitzen les idees del disseny, creant superfícies, buits i estructures que després podran ser impreses. 
+					És important respectar limitacions com gruixos mínims, estabilitat i mida màxima per a impressió 3D.
+				</p>
+				<p>
+					La <strong>impressió 3D</strong> transforma el model digital en un objecte físic capaç de ser manipulat i utilitzat. 
+					Aquest procés implica preparar el fitxer, seleccionar el material i configurar la impressora, i és l’últim pas que permet comprovar que el disseny i el modelatge s’han realitzat correctament.
+					El conjunt de les tres etapes garanteix que el projecte passi de la idea a la realitat, combinant creativitat, precisió i tecnologia.
+				</p>
+            </section>
+
+            <section id="id1" class="content">
+				<h3>Tinkercad</h3>
+
+				<div class="small-float-image-container">
+					<img src="Tinkercad/logo.png"
+					alt="Tinkercad">
+				</div>
+				
+				<p>
+					Tinkercad és una eina en línia gratuïta per al disseny i modelatge 3D. 
+					Permet crear objectes digitals de manera senzilla, combinant formes bàsiques, i preparar-los per a impressió 3D.
+				</p>
+				<p>
+					La seva interfície és intuïtiva: el pla de treball mostra una vista en 3D on es poden col·locar, moure, rotar i alinear les peces amb precisió. 
+					Els controls d’escala i orientació permeten ajustar les dimensions exactes dels objectes. <br>
+					També ofereix funcions com buidatge de peces, agrupació d’objectes i simulació bàsica. 
+				</p>
+				<p>
+					És ideal per a principiants i projectes educatius, ja que permet visualitzar, modificar i exportar els models en formats STL o OBJ per a impressió 3D.
+				</p>
+
+            </section>
+
+            <section id="id2" class="content">
+				<h3>Web i Exemple</h3>
+				<p>
+					Plataforma: <a href="https://www.tinkercad.com/" target="_blank">Tinkercad</a><br>
+					Exemple de disseny: <a href="https://www.tinkercad.com/things/fGVS2m4t7zF-porro-clauer" target="_blank">Porro Clauer</a>
+				</p>
+
+				<strong>Disseny i modelatge 3D del porró clauer</strong>
+				<div class="model3D">
+					<model-viewer 
+						src="Tinkercad/p-Modelatge3D.glb" 
+						alt="Porró clauer Model 3D" 
+						auto-rotate 
+						camera-controls>
+					</model-viewer>
+				</div>
+
+                <strong>Impressió 3D del porró clauer</strong>
+                <video class="video-container" autoplay muted loop playsinline controls preload="metadata">
+                    <source src="Tinkercad/p-Impressio3D.mp4" type="video/mp4">
+                    El teu navegador no suporta vídeo HTML5.
+                </video>
+
+				<strong>Demostració del porró clauer</strong>
+				<video class="video-container" controls preload="metadata" poster="Tinkercad/p-Impressio3D.jpg">
+					<source src="Tinkercad/p-Funcionament.mp4" type="video/mp4">
+					El teu navegador no suporta vídeo HTML5.
+				</video>
+
+            </section>
+
+            <section id="id3" class="content">
+				<h3>Disseny i modelatge</h3>
+				<ul>
+					<li>Si no està molt ben justificat, només "Basic Shapes".</li>
+					<li>Ha de ser estable sobre una superfície plana; si cal, feu una base.</li>
+					<li>Buit per dins, no massa sòlida: tant per estalviar filament com per practicar el buidatge.</li>
+					<li>Evita parets massa fines: Recomanat ≥1mm.</li>
+					<li>Ha de ser petita: 10x10 cm màxim. Es prioritzaran peces més petites per a impressió.</li>
+					<li>Per poder fer la impressió, les peces han d'estar sobre el pla de treball, no flotant a l'aire.</li>
+					<li>La impressió és en un sol color; no feu detalls amb colors.</li>
+					<li>Les peces que formin un bloc han d'estar unides en la versió final.</li>
+				</ul>
+            </section>
+
+            <section id="id4" class="content">
+				<h3>Entrega</h3>
+				<ul>
+					<li>Feu el projecte públic i entregueu l'enllaç.</li>
+					<li>Exporta en format adequat: STL i OBJ per a impressió 3D.</li>
+					<li>Afegir document amb els passos realitzats en el disseny (amb captures). Adjunteu captura de l'historial per demostrar les fases del desenvolupament. Mostreu una secció completa: la peça partida longitudinalment.</li>
+					<li>El millor disseny (funcionalitat, originalitat, estètica, etc.) podrà ser imprès si compleix els requisits.</li>
+					<li>Quan finalitzi la impressió, porteu-la; així tots els companys podran veure-la.</li>
+				</ul>
+            </section>
+
+            <section id="id5" class="content">
+				<h3>Tutorial (demostració a l'aula)</h3>
+				<ul>
+					<li>Vistes a l'esquerre de la pantalla i amb el ratolí.</li>
+					<li>"Snap Grid : 1mm" → unitat de mesura; cada modificació serà d'1mm.</li>
+					<li>Diferents figures: veure les propietats de modificació i pensar quina triem en cada ocasió.</li>
+					<li>Modificacions que es poden fer amb una figura: alçada, amplada, longitud, etc. Recomendat el màxim d'steps per millor resolució.</li>
+					<li>Moure la peça per la zona de treball: rotar en dos eixos i desplaçar en x, y, z.</li>
+					<li>Alinear dues peces: fes dues peces i clicar punts d'eix d'una perquè quedin alineades.</li>
+					<li>Unir peces: principalment per crear buits i assemblatge definitiu. Unir figures fa que perdin algunes propietats; no feu fins que la peça estigui enllestida.</li>
+				</ul>
+            </section>
+
+            <section id="id6" class="content">
+				<h3>Alumnes que facin la impressió 3D</h3>
+				<ul>
+					<li><strong>Software:</strong> UltiMaker Cura</li>
+					<li><strong>Versió impressora 3D:</strong> UltiMaker S5</li>
+					<li><strong>Temps màxim d'impressió:</strong> 3 hores</li>
+				</ul>
+            </section>
+
+
+
+            <section id="id7" class="content">
+                <h3>7</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
+                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
+                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
+                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
+                </p>
+            </section>
+
+            <section id="id8" class="content">
+                <h3>8</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
+                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
+                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
+                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
+                </p>
+            </section>
+
+            <section id="id9" class="content">
+                <h3>9</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    sdfghujio
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    sdfghujio
+                </p>
+            </section>
+
+            <section id="id10" class="content">
+                <h3>10</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
+                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
+                    sdfghujio
+                </p>
+
+            </section>
+
+        </article>
+
+        <footer></footer>
+
+    </main>
+
+    <div class="scroll-to-top"></div>
+
+</body>
+</html>
