@@ -11,6 +11,7 @@ const dades = {
     "aplicainfo": {
 		"disseny3D": ["Disseny, modelatge i impressió 3D","disseny3D/disseny3D.html"],
 		"fullAPI": ["Full de càlcul com a API","fullAPI/fullAPI.html"],
+		"appsscript": ["Google Apps Script","appsscript/GoogleAppsScript.html"],
 		"mymaps": ["Google My Maps","mymaps/mymaps.html"]
     },
     "templates": {
