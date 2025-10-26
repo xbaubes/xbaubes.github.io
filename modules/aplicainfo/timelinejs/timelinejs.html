@@ -6,7 +6,6 @@
     <meta name="author" content="Xavier Baubes">
     <meta name="description" content="Lloc web on trobaràs material de docència informàtica actualitzat i en català">
     <meta name="keywords" content="SMX, DAM, DAW, ASIX, FP, cicle formatiu, informatica, CSS, HTML, Javascript, FTP, git, xarxes, sistemes, bases de dades, aplicacions, web, desenvolupament, programacio">
-    <!-- <meta name="title" content="Template"> -->
     <title>Docència informàtica</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/icons/frontend-web-logo.ico">
     <link rel="stylesheet" href="../../../assets/css/main.css">
@@ -16,6 +15,7 @@
     <script src="../../../data/strings.js" type="text/javascript"></script>
     <script src="../../../assets/js/components.js" type="text/javascript" defer></script>
     <script src="../../../assets/js/componentsContent.js" type="text/javascript" defer></script>
+	<!-- TimelineJS libraries -->
 	<link rel="stylesheet" href="../../../assets/timeline3/css/timeline.css">
 	<script src="../../../assets/timeline3/js/timeline.js"></script>
 </head>
@@ -46,32 +46,70 @@
 
             <section class="menu">
                 <ul>
-                    <!--<li><a href="#intro">Introducció</a></li>-->
-                    <li><a href="#id1">1</a></li>
-                    <li><a href="#id2">2</a></li>
-                    <li><a href="#id3">3</a></li>
-                    <li><a href="#id4">4</a></li>
-                    <li><a href="#id5">i est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia Curae; Pellentesque habitant </a></li>
-                    <li><a href="#id6">6</a></li>
-                    <li><a href="#id7">7</a></li>
-                    <li><a href="#id8">8</a></li>
-                    <li><a href="#id9">9</a></li>
-                    <li><a href="#id10">10</a></li>
+                    <li><a href="#id1">Funcionament</a></li>
+                    <li><a href="#id2">Exemple: Història de Catalunya</a></li>
+                    <li><a href="#id3">Activitat</a></li>
                 </ul>
             </section>
 
             <section id="intro" class="content">
-                <p>
-                </p>
-				<a href="https://timeline.knightlab.com/" target="_blank">Knight Lab TimelineJS</a>
+
+				<p>Un <strong>timeline</strong> (o línia del temps) és una representació visual d’esdeveniments en ordre cronològic.<br>
+				Permet veure com evolucionen fets, projectes o històries al llarg del temps, i facilita la comprensió de la seqüència i durada dels esdeveniments.</p>
+
+				<p>Els timelines s’utilitzen habitualment en contextos com la història, la gestió de projectes, l’anàlisi de processos o l’exposició de dades estadístiques.<br>
+				Poden ser de dos tipus: <strong>estàtics</strong> (imatges, gràfics simples) o <strong>interactius</strong> (on es pot navegar, filtrar o ampliar informació).</p>
+
+				<p><strong><a href="https://timeline.knightlab.com/" target="_blank">TimelineJS</a></strong>
+				és una biblioteca <strong>open source</strong> codificada amb <strong>JavaScript</strong> que permet crear timelines interactius i atractius per a pàgines web.<br>
+				És fàcil d’integrar i permet incloure imatges, vídeos, mapes i text en cada esdeveniment.</p>
+
+				<p>Característiques principals de TimelineJS:</p>
+				<ul>
+					<li>Totalment interactiu i responsive.</li>
+					<li>Permet afegir imatges, vídeos, mapes i text a cada esdeveniment.</li>
+					<li>Molt fàcil de configurar amb un fitxer <strong>JSON</strong> o <strong>Google Sheets</strong>.</li>
+				</ul>
+
             </section>
             
             <section id="id1" class="content">
-                <h3>1111111111111</h3>
 
+                <h3>Funcionament</h3>
+				Segueix les <a href="https://timeline.knightlab.com/#make" target="_blank">instruccions d’ús</a>:
 
+				<ol>
+					<li>Obre la plantilla amb les columnes incorporades, hauràs d'esborrar les files d'exemple.</li>
+					<li>Fes clic a <strong>"Fes una còpia"</strong> per afegir-lo al teu Google Drive.</li>
+					<li>Omple les columnes amb la informació de cada esdeveniment, per exemple:
+						<ol type="a">
+							<li><strong>Data d'inici / Data de fi:</strong> Any, mes, dia.</li>
+							<li><strong>Títol:</strong> Nom de l'esdeveniment.</li>
+							<li><strong>Text:</strong> Descripció de l'esdeveniment.</li>
+							<li><strong>Media:</strong> URL d'imatge, vídeo o mapa.</li>
+							<li><strong>Tipus:</strong> "title", "era" o per defecte</li>
+						</ol>
+					</li>
+					<li>Publica el full de càlcul:
+						<ol type="a">
+							<li>
+								Ves a <strong>Fitxer &gt; Comparteix &gt; Publicar al web</strong>.<br>
+								<img src="https://raw.githubusercontent.com/xbaubes/xbaubes.github.io/refs/heads/main/modules/aplicainfo/timelinejs/public-sheets.png" 
+									alt="Full de càlcul per TimelineJS"
+									width="600"
+									height="auto">
+							</li>
+							<li>Fes clic a <strong>"Publica"</strong> i copia l'URL que apareix.</li>
+						</ol>
+					</li>
+					<li>Si no vols descarregar TimelineJS al teu servidor i, simplement, carregar els fitxers directament des del servidor oficial cada vegada que la pàgina s’obre,<br>
+					continua les instruccions que trobaràs a la web oficial per generar i inserir a la web el teu timeline interactiu.</li>
+				</ol>
 
+            </section>
+
+            <section id="id2" class="content">
+                <h3>Exemple: Història de Catalunya</h3>
 				<div id="no-button"><div id="timeline-embed" style="width: 100%; height: 700px"></div></div>
 
 				<script type="text/javascript">
@@ -81,11 +119,16 @@
 				);
 				</script>
 
-				<img src="https://raw.githubusercontent.com/xbaubes/xbaubes.github.io/refs/heads/main/modules/aplicainfo/timelinejs/public-sheets.png" 
-					alt="Full de càlcul per TimelineJS"
-					width="600"
-					height="auto">
-
+				<p>
+					Aquest timeline interactiu utilitza les llibreries de TimelineJS emmagatzemades localment, 
+					de manera que no depenem de servidors externs per carregar els fitxers CSS i JavaScript. 
+					Això garanteix que la línia del temps sempre funcioni encara que no hi hagi connexió a Internet o si el <strong>CDN</strong> oficial falla.
+					<br><br>
+					Per incloure les llibreries locals i utilitzar-les en la teva pàgina, consulta el codi d'aquesta pàgina descarregant-la des del repositori.<br>
+					Si prefereixes utilitzar els servidors proporcionats per l'aplicació, només cal que incrustis el CDN que l'aplicació facilita.<br>
+					Això permet carregar les llibreries de TimelineJS directament des del servidor oficial sense necessitat de tenir els fitxers localment.<br>
+					Codi que podria usar per incrustar el timeline interactiu de "Història de Catalunya" usant CDN:
+				</p>
 <pre>
 	<code>&lt;iframe
 		src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vQ8BiyXB5AXGWh6qQJ-EDVPQVlhRrXyQLloyjkZUqloRyc8PsQZu3UH7NANSMFKQMBm74mIkuqIoqHR&font=Default&lang=ca&initial_zoom=2&width=100%25&height=650"
@@ -96,153 +139,71 @@
 	&lt;/iframe&gt;</code>
 </pre>
 
+				<p>A continuació es mostra el Google Sheets publicat a la web des d'on TimelineJS obté les dades que utilitza per generar la línia del temps de "Història de Catalunya".<br>
+				Cada fila de la fulla representa un esdeveniment amb la seva data, títol, descripció, imatges, etc.<br>
+				Pots actualitzar aquesta fulla en qualsevol moment, i els canvis es reflectiran automàticament a la línia del temps.</p>
+
 				<iframe
 					src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8BiyXB5AXGWh6qQJ-EDVPQVlhRrXyQLloyjkZUqloRyc8PsQZu3UH7NANSMFKQMBm74mIkuqIoqHR/pubhtml?widget=true&amp;headers=false"
 					width="100%"
 					height="400">
 				</iframe>
-
-            </section>
-
-            <section id="id2" class="content">
-                <h3>2</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac 
-                </p>
             </section>
 
             <section id="id3" class="content">
-                <h3>3</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
 
-            <section id="id4" class="content">
-                <h3>4</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
+                <h3>Activitat per l'estudi dels àmbits ambiental, tecnològic o social</h3>
 
-            <section id="id5" class="content">
-                <h3>5</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id6" class="content">
-                <h3>6</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id7" class="content">
-                <h3>7</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id8" class="content">
-                <h3>8</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Sed fringilla lobortis neque, eu dignissim turpis efficitur sit amet. Curabitur vestibulum tortor a
-                    sapien dictum, eu tincidunt libero eleifend. Donec condimentum, lacus ac finibus cursus, ex ligula ultricies mi, ut condimentum odio sapien sit
-                    amet justo. Nullam et hendrerit turpis. Integer non massa vitae felis mollis cursus a a nunc. Ut in nisi et nunc volutpat vestibulum. Fusce in diam
-                    vitae arcu lacinia fermentum ac sed risus. Suspendisse volutpat ipsum magna, vitae elementum risus aliquet et.
-                </p>
-            </section>
-
-            <section id="id9" class="content">
-                <h3>9</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
-            </section>
-
-            <section id="id10" class="content">
-                <h3>10</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam vehicula, lectus quis pharetra tempor, magna ipsum scelerisque nisi,
-                    ac gravida orci est nec odio. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus
-                    sdfghujio
-                </p>
+				Escull un d'aquests temes per fer-ne una línia de temps amb TimelineJS:
+				<ol>
+				<li><strong>Eres i períodes geològics a la Terra</strong>
+				  <ul>
+					<li>Per exemple, dins del Mesozoic tenim:
+					  <ul>
+						<li>Triàsic</li>
+						<li>Juràssic</li>
+						<li>Cretaci</li>
+					  </ul>
+					</li>
+					<li>Incloure espècies més comunes en cada període</li>
+					<li>Esdeveniments naturals clau</li>
+				  </ul>
+				</li>
+				<li><strong>Avenços científics/tecnològics i socials</strong> com:
+				  <ul>
+					<li>Primera revolució agrícola</li>
+					<li>Primera revolució industrial</li>
+				  </ul>
+				</li>
+				<li><strong>Extinció d'espècies històries i modernes</strong>
+				  <ul>
+					<li>Detallar-ne les causes</li>
+					<li>Legislació o acords de protecció de la biodiversitat</li>
+					<li>Protecció d'espècies en perill d'extinció</li>
+				  </ul>
+				</li>
+				<li><strong>Canvis climàtics i mediambientals al llarg de la història de la Terra</strong> com:
+				  <ul>
+					<li>Glaciacions i períodes interglacials</li>
+					<li>Canvis en els nivells del mar</li>
+					<li>Desertificació</li>
+				  </ul>
+				</li>
+				</ol>
+				
+				<p>Requisits per el vostre TimelineJS:</p>
+				<ul>
+					<li>Almenys <strong>7 esdeveniments</strong>.</li>
+					<li>Per cada esdeveniment cal incloure, com a mínim:
+						<ul>
+							<li>Data d'inici i data de finalització.</li>
+							<li>Text explicatiu de l'esdeveniment.</li>
+							<li>Miniatura representativa.</li>
+							<li>Un element multimèdia (imatge o vídeo).</li>
+						</ul>
+					</li>
+					<li>Incloure almenys <strong>3 eres</strong> per agrupar els esdeveniments.</li>
+				</ul>
 
             </section>
 
