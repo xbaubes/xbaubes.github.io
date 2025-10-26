@@ -215,7 +215,7 @@ article section.content label { font-weight: bold; }
 }
 
 /* button, select, input */
-article section.content button, article section.content select, article section.content input {
+article section.content button:not(#timeline-embed button), article section.content select, article section.content input {
 	padding: 7px;
 }
 
