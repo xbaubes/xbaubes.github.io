@@ -215,17 +215,19 @@ article section.content label { font-weight: bold; }
 }
 
 /* button, select, input */
-article section.content button, article section.content select, article section.content input {
+article section.content button:not(#no-button button), article section.content select, article section.content input {
 	padding: 7px;
 }
-article section.content button {
+
+article section.content button:hover:not(#no-button button) {
+	background-color: var(--color-title);
+}
+
+article section.content button:not(#no-button button) {
 	background-color: var(--menu-link);
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-}
-article section.content button:hover {
-	background-color: var(--color-title);
 }
 
 /* table */
