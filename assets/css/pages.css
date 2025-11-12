@@ -199,6 +199,14 @@ article section.menu ul li a:hover {
     background-color: var(--image-padding);
 }
 
+/* Marc */
+.marc-informatiu {
+	border: 1px solid var(--color-arrowup-hover); border-radius:6px;
+	padding: 10px;
+	max-width: 100%;
+	margin-bottom: 15px;
+}
+
 /*
 .dropdown:hover .dropdown-content {
     display: block;
