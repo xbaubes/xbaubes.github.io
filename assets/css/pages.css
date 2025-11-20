@@ -376,6 +376,7 @@ article section.content .triple-image-container img {
 @media (min-width: 500px) and (max-width: 700px) { /* En pantalles entre 500px i 700px */
     article section.content .triple-image-container .img-box {
         width: 90%;
+		text-align: center;
     }
     article section.content .triple-image-container .img-box + .img-box {
         margin-top: 10px;
@@ -384,6 +385,7 @@ article section.content .triple-image-container img {
 @media screen and (max-width: 499px) { /* En pantalles menors de 500px */
     article section.content .triple-image-container .img-box {
         width: 100%;
+		text-align: center;
     }
     article section.content .triple-image-container .img-box + .img-box {
         margin-top: 5px;
