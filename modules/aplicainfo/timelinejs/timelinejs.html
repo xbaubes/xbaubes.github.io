@@ -123,7 +123,7 @@
 				<p>
 					Aquest timeline interactiu utilitza les llibreries de TimelineJS emmagatzemades localment, 
 					de manera que no depenem de servidors externs per carregar els fitxers CSS i JavaScript. 
-					Això garanteix que la línia del temps sempre funcioni encara que no hi hagi connexió a Internet o si el <strong>CDN</strong> oficial falla.
+					Això garanteix que la línia del temps funcioni encara que falli el servidor <strong>CDN</strong> que distribueix els arxius oficials del projecte.
 					<br><br>
 					Per incloure les llibreries locals i utilitzar-les en la teva pàgina, consulta el codi d'aquesta pàgina descarregant-la des del repositori.<br>
 					Obrir carpeta amb la llibreria <a href="https://github.com/xbaubes/xbaubes.github.io/tree/main/assets/timeline3" target="_blank">TimelineJS</a>.<br>
@@ -150,6 +150,10 @@
 					width="100%"
 					height="400">
 				</iframe>
+
+				<p>Per fer el projecte menys dependent de l'accés a Internet es poden guardar les dades en format JSON en lloc d'utilitzar Google Sheets; de fet, això és el que passa quan TimelineJS processa un full de Google Sheets, ja que internament les dades es converteixen automàticament en JSON abans de ser utilitzades per l'aplicació.</p>
+				Les dades en format JSON del full de Google Sheets es poden obtenir automàticament utilitzant l’endpoint gviz de Google Visualization API: <a href="https://docs.google.com/spreadsheets/d/112lQ-SI9mVR8hXkXtO0WJdmutqQTRgNyRpLqXc8M4pk/gviz/tq?tqx=out:json" target="_blank">JSON d'aquest projecte usant gviz</a>.
+
             </section>
 
             <section id="id3" class="content">
