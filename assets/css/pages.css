@@ -199,6 +199,12 @@ article section.menu ul li a:hover {
     background-color: var(--image-padding);
 }
 
+/*
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
+
 /* Marc */
 .marc-informatiu {
 	border: 1px solid var(--color-arrowup-hover); border-radius:6px;
@@ -207,11 +213,11 @@ article section.menu ul li a:hover {
 	margin-bottom: 15px;
 }
 
-/*
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Highlighted text */
+.text-ressaltat {
+    background-color: var(--color-title);
+    padding: 2px 4px;
 }
-*/
 
 /* form, label */
 article section.content form { margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 600px; width: 100%; box-sizing: border-box; }
