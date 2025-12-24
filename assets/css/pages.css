@@ -215,7 +215,8 @@ article section.menu ul li a:hover {
 
 /* Highlighted text */
 .text-ressaltat {
-    background-color: var(--color-nav);
+    background-color: var(--color-title);
+	color: white;
     padding: 2px 4px;
 }
 
