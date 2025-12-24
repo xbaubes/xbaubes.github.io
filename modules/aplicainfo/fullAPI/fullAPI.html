@@ -62,13 +62,13 @@
 				</div>
                 <p>
                     Eines com <strong>SheetDB</strong> són útils perquè converteixen un full de càlcul
-                    en una <strong>API RESTful</strong>
+                    en una <a href="https://xbaubes.github.io/modules/desenvolupaweb/apirest/apirest.html?page=API%20REST"><strong>API REST</strong></a>
 					<br>
 					Una API RESTful és un servei web amb el qual pots comunicar-te per:
 					<br>
                     <em>Llegir,</em>
 					<em>afegir,</em>
-					<em>editar,</em>
+					<em>editar</em>
 					<em>i eliminar</em>
 					dades utilitzant crides HTTP
                     (<code>GET</code>, <code>POST</code>, <code>PUT/PATCH</code> i <code>DELETE</code>).
@@ -82,7 +82,7 @@
                 </ul>
 
                 <p>
-                    Pots aprofitar <strong>Google Sheets</strong> com a <strong>magatzem de dades</strong> i fer-lo accessible de manera estructurada i estàndard.
+                    Pots aprofitar <strong>Google Sheets</strong> com a <strong>magatzem de dades</strong> i fer-lo accessible de manera estructurada i estandaritzada.
                 </p>
             </section>
             
@@ -118,16 +118,10 @@
                     <li>
 						Crees el full de càlcul amb les columnes (capçaleres) a la primera fila, els registres amb les dades els posarem a partir de la segona línia.
 						<br>Pots utilitzar Google Sheets, que s'emmagatzema automàticament a Google Drive. Cal que sigui públic, almenys per lectura, per tal que SheetDB hi pugui accedir.
-						<br>Si vols utilitzar diferents taules per la teva API, pots separar-les en diferents fulls. Explicació
-						<a href="https://docs.sheetdb.io/multiple-sheets" target="_blank">
-							aquí
-						</a>
+						<br>Si vols utilitzar diferents taules per la teva API, pots separar-les en diferents fulls, utilitzant l'atribut <a href="https://docs.sheetdb.io/multiple-sheets" target="_blank"><em>sheet</em></a>.
 					</li>
                     <li>
-						El connectes a SheetDB i obtens una URL d’API. Pots accedir a la pàgina web de SheetDB clickant
-						<a href="https://sheetdb.io/" target="_blank">
-							aquí
-						</a>
+						El connectes a SheetDB i obtens una URL d’API. Pots crear-la des de la pàgina web oficial de <a href="https://sheetdb.io/" target="_blank">SheetDB</a>.
 						<br>Tot queda sincronitzat amb el full en temps real.
 					</li>
                     <li>
@@ -156,20 +150,16 @@
                 <p>A través d'aquest formulari HTML podem cercar i visualitzar elements químics. SheetDB permet generar un token per restringir l'accés als endpoints però com que no es pot enviar amb seguretat des d'un navegador web, aquest aplicació no n'utilitza i només permet GET.</p>
                 <p>El formulari obté la informació a través d'un full de càlcul connectat a <strong>SheetDB</strong> (Google Sheets convertit en API REST).</p>
                 <p>
-                    Pots veure el Google Sheets d'on s'obtenen les dades clickant
+                    Aquestes dades s'obtenen d'un
                     <a href="https://docs.google.com/spreadsheets/d/1izf8-enZhMFNLQ7UC1Mp3R2ltVBT0gCZ4ItjDtiFVJs/edit?usp=sharing" target="_blank">
-                        aquí
-                    </a>
+                        Google Sheets
+                    </a>.
                 </p>
                 <p>
-                    I pots veure les dades en format JSON que retorna el servei API REST clickant
-                    <a href="https://sheetdb.io/api/v1/q4eo36ocdijgf" target="_blank">
-                        aquí
-                    </a>
-					<br>Les dades es poden sol·licitar ordenades per qualsevol camp. Explicació
-                    <a href="https://docs.sheetdb.io/sheetdb-api/read#get-content" target="_blank">
-                        aquí
-                    </a>
+                    I pots veure les <a href="https://sheetdb.io/api/v1/q4eo36ocdijgf" target="_blank">dades en format JSON</a> que retorna el servei API REST.
+
+					<br>Les dades es poden sol·licitar ordenades per qualsevol camp utilitzant <a href="https://docs.sheetdb.io/sheetdb-api/read#get-content" target="_blank">sort_by i sort_order</a>.
+
                 </p>
 
                 <ul>
@@ -272,9 +262,7 @@
             <section id="id5" class="content">
                 <h3>Crides a l'API</h3>
 				<div>
-					<p>Un exemple dels endpoints que facilita l'aplicació per cada mètode HTTP. Informació obtinguda de la font oficial, clicka 
-						<a href="https://docs.sheetdb.io/" target="_blank">aquí</a>
-					</p>
+					<p>Un exemple dels endpoints que facilita l'aplicació per cada mètode HTTP. Informació obtinguda de la <a href="https://docs.sheetdb.io/" target="_blank">documentació oficial</a>.</p>
 					<ul>
 						<li>
 							<strong>GET</strong> Obtenir totes les dades:<br>
