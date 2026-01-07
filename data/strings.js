@@ -9,10 +9,12 @@ const dades = {
 		"vpn": ["VPN","vpn/vpn.html"]
     },
     "aplicainfo": {
+		"chart": ["Chart.js","chart/chartjs.html"],
 		"disseny3D": ["Disseny, modelatge i impressió 3D","disseny3D/disseny3D.html"],
 		"fullAPI": ["Full de càlcul com a API","fullAPI/fullAPI.html"],
 		"appsscript": ["Google Apps Script","appsscript/GoogleAppsScript.html"],
 		"mymaps": ["Google My Maps","mymaps/mymaps.html"],
+		"leaflet": ["Leaflet.js","leaflet/leafletjs.html"],
 		"timelinejs": ["Timeline JS","timelinejs/timelinejs.html"],
     },
     "templates": {
