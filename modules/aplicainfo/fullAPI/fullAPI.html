@@ -269,6 +269,7 @@
 							<strong>GET</strong> Obtenir totes les dades:<br>
 							<code>/</code><br>
 							<span class="text-ressaltat">https://sheetdb.io/api/v1/ID_FULL_SHEETDB</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>GET</strong> Cercar dades per camps:<br>
@@ -278,12 +279,27 @@
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/search?nom=Maria
 							</span>
 						</li>
+						<ul><li>
+							
+							Podem afegir més d'una condició a la URL, per exemple, per filtrar per varis camps:
+
+							<ul>
+							  <li>El primer paràmetre va després de <code>?</code></li>
+							  <li>Els següents es separen amb <code>&amp;</code></li>
+							</ul>
+
+							<strong>Exemple:</strong> Cerca files on <code>nom=Maria</code> i <code>cognom=Pujol</code><br>
+							<code>/search?nom=Maria&amp;cognom=Pujol</code>
+							<br><br>
+							
+						</li></ul>
 						<li>
 							<strong>POST</strong> Afegir fila nova:<br>
 							<code>/</code><br>
 							<span class="text-ressaltat">
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB
 							</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>PATCH / PUT</strong> Actualitzar dades:<br>
@@ -292,6 +308,7 @@
 							<span class="text-ressaltat">
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3
 							</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>DELETE</strong> Esborrar dades:<br>
