@@ -135,7 +135,9 @@
                     </ul>
                     </li>
 					Si vols que SheetDB hi pugui fer canvis al teu full de càlcul, per exemple per implementar POST, li hauràs de donar permís.
-					<li>SheetDB crea un endpoint per cada mètode HTTP. Si hi fas una crida HTTP rebràs un resposta en format JSON amb les dades sol·licitades.</li>
+					<li>SheetDB crea un endpoint per cada mètode HTTP. Si hi fas una crida HTTP rebràs un resposta en format JSON amb les dades sol·licitades.
+					<br>Les dades es poden sol·licitar ordenades per qualsevol camp utilitzant <a href="https://docs.sheetdb.io/sheetdb-api/read#get-content" target="_blank"><em>sort_by i sort_order</em></a>.</li>
+					
                 </ol>
 				
 				<div class="medium-image-container">
@@ -158,9 +160,6 @@
                 </p>
                 <p>
                     I pots veure les <a href="https://sheetdb.io/api/v1/q4eo36ocdijgf" target="_blank">dades en format JSON</a> que retorna el servei API REST.
-
-					<br>Les dades es poden sol·licitar ordenades per qualsevol camp utilitzant <a href="https://docs.sheetdb.io/sheetdb-api/read#get-content" target="_blank">sort_by i sort_order</a>.
-
                 </p>
 
                 <ul>
@@ -269,6 +268,7 @@
 							<strong>GET</strong> Obtenir totes les dades:<br>
 							<code>/</code><br>
 							<span class="text-ressaltat">https://sheetdb.io/api/v1/ID_FULL_SHEETDB</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>GET</strong> Cercar dades per camps:<br>
@@ -278,12 +278,27 @@
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/search?nom=Maria
 							</span>
 						</li>
+						<ul><li>
+							
+							Podem afegir més d'una condició a la URL, per exemple, per filtrar per varis camps:
+
+							<ul>
+							  <li>El primer paràmetre va després de <code>?</code></li>
+							  <li>Els següents es separen amb <code>&amp;</code></li>
+							</ul>
+
+							<strong>Exemple:</strong> Cerca files on <code>nom=Maria</code> i <code>cognom=Pujol</code><br>
+							<code>/search?nom=Maria&amp;cognom=Pujol</code>
+							<br><br>
+							
+						</li></ul>
 						<li>
 							<strong>POST</strong> Afegir fila nova:<br>
 							<code>/</code><br>
 							<span class="text-ressaltat">
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB
 							</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>PATCH / PUT</strong> Actualitzar dades:<br>
@@ -292,6 +307,7 @@
 							<span class="text-ressaltat">
 								https://sheetdb.io/api/v1/ID_FULL_SHEETDB/id/3
 							</span>
+							<br><br>
 						</li>
 						<li>
 							<strong>DELETE</strong> Esborrar dades:<br>
