@@ -15,8 +15,17 @@ const dades = {
 		"appsscript": ["Google Apps Script","appsscript/GoogleAppsScript.html"],
 		"mymaps": ["Google My Maps","mymaps/mymaps.html"],
 		"leaflet": ["Leaflet.js","leaflet/leafletjs.html"],
-		"timelinejs": ["Timeline JS","timelinejs/timelinejs.html"],
+		"timelinejs": ["Timeline JS","timelinejs/timelinejs.html"]
     },
+	"basesddades": {
+		
+	},
+	"programainfo": {
+		"bucles": ["Funcionament dels bucles","bucles/bucles.html"]
+	},
+	"sistemopera": {
+		
+	},
     "templates": {
         "t1": ["Template","content/templateModuleContent.html"],
         "t2": ["Testing 1","content/templateModuleContentTesting.html"]
