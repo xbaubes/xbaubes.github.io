@@ -21,7 +21,7 @@ const dades = {
 		
 	},
 	"programainfo": {
-		"bucles": ["Funcionament dels bucles","bucles/bucles.html"]
+		"bucles": ["Bucles","bucles/bucles.html"]
 	},
 	"sistemopera": {
 		
