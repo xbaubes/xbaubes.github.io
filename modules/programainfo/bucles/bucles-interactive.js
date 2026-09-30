@@ -23,7 +23,7 @@
                       stop();i=0;phase='init';laps=0;code();mark(-1);chk(null);
                       $('iv').textContent='–';$('laps').innerHTML='';
                       $('out').textContent='';$('out').classList.remove('bl-final');
-                      say('Prem «Pas a pas» per començar.');stepB.disabled=false;playB.disabled=false;
+                      say('Prem «Pas a pas» o «Reproduir» per començar.');stepB.disabled=false;playB.disabled=false;
                     }
 
                     function step(){
