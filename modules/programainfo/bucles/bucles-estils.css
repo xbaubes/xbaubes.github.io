@@ -1,0 +1,104 @@
+/* CSS del bloc del bucle: tot penja de .bl */
+.bl{
+  --bl-bg:#eef1f8;--bl-ink:#1b2340;--bl-muted:#5b6485;--bl-panel:#ffffff;--bl-line:#d3d9ec;
+  --bl-accent:#2f5bff;--bl-hl:#ffd84d;--bl-hlink:#1b2340;--bl-ok:#1f9d6b;--bl-no:#d6455d;
+  --bl-say-bg:#e9ecf3;--bl-say-ink:#4a5170;
+  --bl-sans:"Bricolage Grotesque",system-ui,sans-serif;
+  --bl-mono:"JetBrains Mono",ui-monospace,monospace;
+  display:block;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:32px 20px 40px;
+  background:var(--bl-bg);color:var(--bl-ink);border-radius:16px;
+  font-family:var(--bl-sans);font-size:16px;line-height:1.5;font-weight:400;
+  text-align:left;text-transform:none;letter-spacing:normal;
+}
+@media (prefers-color-scheme:dark){
+  .bl:not([data-theme="light"]){
+    --bl-bg:#141a33;--bl-ink:#e8ecfb;--bl-muted:#9aa3c7;--bl-panel:#1d2544;--bl-line:#2f3a66;
+    --bl-accent:#7f9bff;--bl-ok:#4fd6a0;--bl-no:#ff7d92;--bl-say-bg:#2a3358;--bl-say-ink:#b9c1e0;
+  }
+}
+.bl[data-theme="dark"]{
+  --bl-bg:#141a33;--bl-ink:#e8ecfb;--bl-muted:#9aa3c7;--bl-panel:#1d2544;--bl-line:#2f3a66;
+  --bl-accent:#7f9bff;--bl-ok:#4fd6a0;--bl-no:#ff7d92;--bl-say-bg:#2a3358;--bl-say-ink:#b9c1e0;
+}
+.bl *,.bl *::before,.bl *::after{box-sizing:border-box}
+
+.bl .bl-title{margin:0 0 12px;padding:0;font:800 clamp(1.8rem,5vw,3rem)/1.05 var(--bl-sans);letter-spacing:-.02em;color:var(--bl-ink);text-transform:none}
+.bl .bl-lead{margin:0 0 28px;max-width:60ch;font-size:1.15rem;color:var(--bl-muted)}
+.bl .bl-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+@media(max-width:700px){.bl .bl-grid{grid-template-columns:1fr}}
+.bl .bl-card{margin:0;background:var(--bl-panel);border:1px solid var(--bl-line);border-radius:14px;padding:18px;min-width:0}
+
+.bl .bl-h{margin:0 0 14px;padding:0;font-family:"Fredoka",var(--bl-sans);font-size:1.5rem;line-height:1.2;font-weight:600;
+  letter-spacing:.16em;text-transform:none;-webkit-text-stroke:5px #000;paint-order:stroke fill}
+.bl .bl-h.bl-y{color:var(--bl-hl)}
+.bl .bl-h.bl-b{color:var(--bl-accent)}
+
+.bl .bl-pre{margin:0;padding:0;background:none;border:0;font-family:var(--bl-mono);font-size:.95rem;line-height:1.5;overflow-x:auto;color:inherit}
+.bl .bl-ln{display:block;padding:4px 10px;border-radius:6px;white-space:pre;font-family:var(--bl-mono);transition:background .2s}
+.bl .bl-ln.bl-on{background:var(--bl-hl);color:var(--bl-hlink)}
+
+.bl .bl-vars{display:flex;gap:12px;align-items:center;margin-top:14px;font-family:var(--bl-mono)}
+.bl .bl-var{background:#f5b800;color:#1b2340;border:2px solid #a87600;border-radius:10px;padding:6px 14px;font-weight:700;min-width:5.5rem;text-align:center}
+.bl .bl-var small{display:block;font-weight:400;color:#3a3f5c;font-size:.75rem}
+.bl .bl-check{font-family:var(--bl-mono);font-weight:700;padding:6px 12px;border-radius:10px;height:4rem;display:flex;align-items:center;white-space:pre-line}
+.bl .bl-check.bl-yes{color:var(--bl-ok)}
+.bl .bl-check.bl-no{color:var(--bl-no)}
+.bl .bl-say{min-height:5.2rem;margin:14px 0 0;padding:10px 14px;border-radius:10px;font-size:1.02rem;background:var(--bl-say-bg);color:var(--bl-say-ink)}
+
+.bl .bl-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}
+.bl .bl-label{display:flex;gap:10px;align-items:center;margin:0;font-family:var(--bl-mono);font-size:.9rem;font-weight:400;color:var(--bl-ink)}
+.bl .bl-range{margin:0;padding:0;width:auto;accent-color:var(--bl-accent)}
+
+.bl .bl-btn{
+  appearance:none;-webkit-appearance:none;margin:0;width:auto;height:auto;min-height:0;
+  padding:10px 18px;border:0;border-radius:10px;box-shadow:none;background:var(--bl-accent);color:#fff;
+  font:600 1rem/1.2 var(--bl-sans);text-transform:none;letter-spacing:normal;text-decoration:none;cursor:pointer;
+}
+.bl .bl-btn.bl-alt{background:transparent;color:var(--bl-ink);border:1.5px solid var(--bl-line)}
+.bl .bl-btn:focus-visible,.bl .bl-range:focus-visible{outline:3px solid var(--bl-hl);outline-offset:2px}
+.bl .bl-btn:disabled{opacity:.45;cursor:default}
+
+/* Botons: sempre el nostre estil, en tots els estats, passi el que passi al CSS de la pàgina */
+.bl.bl .bl-btn.bl-btn,
+.bl.bl .bl-btn.bl-btn:hover,
+.bl.bl .bl-btn.bl-btn:focus,
+.bl.bl .bl-btn.bl-btn:active,
+.bl.bl .bl-btn.bl-btn:disabled,
+.bl.bl .bl-btn.bl-btn:disabled:hover{
+  appearance:none !important;-webkit-appearance:none !important;
+  margin:0 !important;padding:10px 18px !important;
+  background:var(--bl-accent) !important;color:#fff !important;
+  border:0 !important;border-radius:10px !important;
+  box-shadow:none !important;transform:none !important;filter:none !important;
+  font:600 1rem/1.2 var(--bl-sans) !important;
+  text-transform:none !important;letter-spacing:normal !important;text-decoration:none !important;
+  opacity:1 !important;cursor:pointer;
+}
+.bl.bl .bl-btn.bl-btn.bl-alt,
+.bl.bl .bl-btn.bl-btn.bl-alt:hover,
+.bl.bl .bl-btn.bl-btn.bl-alt:focus,
+.bl.bl .bl-btn.bl-btn.bl-alt:active,
+.bl.bl .bl-btn.bl-btn.bl-alt:disabled,
+.bl.bl .bl-btn.bl-btn.bl-alt:disabled:hover{
+  background:transparent !important;color:var(--bl-ink) !important;
+  border:1.5px solid var(--bl-line) !important;
+}
+.bl.bl .bl-btn.bl-btn:disabled,
+.bl.bl .bl-btn.bl-btn:disabled:hover,
+.bl.bl .bl-btn.bl-btn.bl-alt:disabled,
+.bl.bl .bl-btn.bl-btn.bl-alt:disabled:hover{
+  opacity:.45 !important;cursor:default;pointer-events:none;
+}
+
+.bl .bl-laps{display:flex;flex-wrap:wrap;gap:8px;min-height:64px;align-content:flex-start}
+.bl .bl-lap{width:56px;height:56px;border-radius:10px;background:var(--bl-accent);color:#fff;display:grid;place-items:center;
+  font-family:var(--bl-mono);font-weight:700;animation:bl-pop .25s ease-out}
+@keyframes bl-pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.bl .bl-lap{animation:none}.bl .bl-ln{transition:none}}
+.bl .bl-out{margin-top:12px;min-height:1.5rem;font-family:var(--bl-mono);font-size:.9rem;color:var(--bl-muted);white-space:pre-line}
+.bl .bl-out.bl-final{color:var(--bl-accent);font-weight:700}
+
+.bl .bl-tips{margin-top:24px;display:grid;gap:12px}
+.bl .bl-tips p{margin:0;padding:0;color:var(--bl-ink)}
+.bl .bl-tips .bl-warn{border-left:4px solid var(--bl-no);padding-left:14px}
+.bl code{display:inline;margin:0;padding:0;background:none;border:0;color:inherit;font-family:var(--bl-mono);font-size:.95em}
