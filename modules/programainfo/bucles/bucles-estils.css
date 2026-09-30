@@ -1,5 +1,6 @@
 /* CSS del bloc del bucle: tot penja de .bl */
 .bl{
+  zoom:.87;
   --bl-bg:#eef1f8;--bl-ink:#1b2340;--bl-muted:#5b6485;--bl-panel:#ffffff;--bl-line:#d3d9ec;
   --bl-accent:#2f5bff;--bl-hl:#ffd84d;--bl-hlink:#1b2340;--bl-ok:#1f9d6b;--bl-no:#d6455d;
   --bl-say-bg:#e9ecf3;--bl-say-ink:#4a5170;
@@ -22,7 +23,7 @@
 }
 .bl *,.bl *::before,.bl *::after{box-sizing:border-box}
 
-.bl .bl-title{margin:0 0 12px;padding:0;font:800 clamp(1.8rem,5vw,3rem)/1.05 var(--bl-sans);letter-spacing:-.02em;color:var(--bl-ink);text-transform:none}
+.bl .bl-title{margin:0 0 12px;padding:0;font:800 clamp(1.2rem,3vw,1.7rem)/1.1 var(--bl-sans);letter-spacing:-.02em;color:var(--bl-ink);text-transform:none}
 .bl .bl-lead{margin:0 0 28px;max-width:60ch;font-size:1.15rem;color:var(--bl-muted)}
 .bl .bl-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
 @media(max-width:700px){.bl .bl-grid{grid-template-columns:1fr}}
